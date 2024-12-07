@@ -1,7 +1,6 @@
 import React from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import bg from "../assets/abstract_tech_background_0903.jpg";
 
 // eslint-disable-next-line react/prop-types
 const TopGame = ({ topsix }) => {

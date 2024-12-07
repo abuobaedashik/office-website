@@ -149,7 +149,7 @@ const AddReview = () => {
             {/* button */}
             <div className=" grid grid-cols-1 items-center gap-2 w-full">
               <button className=" bg-[#D2B48C] w-full input-accent px-5 py-1 rounded-md text-[#ffffff] my-4 mt-5">
-                Add Coffee
+                Add Review
               </button>
             </div>
           </div>

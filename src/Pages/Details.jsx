@@ -1,7 +1,7 @@
 import React from "react";
 import { GrFavorite } from "react-icons/gr";
 import { MdFavorite } from "react-icons/md";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Details = () => {
   const everyReview = useLoaderData();
@@ -14,7 +14,6 @@ const Details = () => {
     genre,
     email,
     name,
-    _id,
   } = everyReview;
   return (
     <div>
@@ -73,9 +72,9 @@ const Details = () => {
          <h2 className="text-base px-4 py-1 rounded-lg font-semibold bg-[#2edc14d4] mt-3">
             {genre}
           </h2>
-          <h2 className="text-base px-2 py-2 rounded-lg font-semibold bg-[#2edc14d4] mt-3">
+          <Link  className="text-base px-2 py-2 rounded-lg font-semibold bg-[#2edc14d4] mt-3">
             <MdFavorite />
-          </h2>
+          </Link>
         </div>
 
         </div>
