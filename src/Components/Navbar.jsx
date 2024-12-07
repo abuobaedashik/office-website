@@ -8,6 +8,7 @@ import { CgProfile } from "react-icons/cg";
 import { FcAbout } from "react-icons/fc";
 import { MdReviews } from "react-icons/md";
 import { IoAddCircleOutline } from "react-icons/io5";
+import ThemeControl from "./ThemeControl";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(Authcontext);
@@ -58,7 +59,7 @@ const Navbar = () => {
         }
         to="/myreview"
       >
-       <CgProfile></CgProfile>
+        <CgProfile></CgProfile>
         My Reviews
       </NavLink>
       <NavLink
@@ -118,36 +119,36 @@ const Navbar = () => {
         {link}
       </div>
 
-        {/* user profile */}
+      {/* user profile */}
       <div className="navbar-end ml-1 flex items-center gap-4 ">
-            <div className="pro md:flex flex-col md:flex-row items-center justify-center ">
-            <div>
-              {user && user?.email ? (
-                <div className=" font-medium ">
-                  <img
-                    src={user?.photoURL}
-                    className="w-5 h-5 rounded-full object-cover"
-                    alt=""
-                  />
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-            <div className="hidden sm:flex">
-              {user && user?.email ? (
-                <div className="md:text-base text-xs font-medium  items-center justify-center">
-                  {" "}
-                  {user?.displayName}
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
+          <ThemeControl></ThemeControl>
+        <div className="pro md:flex flex-col md:flex-row items-center justify-center ">
+          <div>
+            {user && user?.email ? (
+              <div className=" font-medium ">
+                <img
+                  src={user?.photoURL}
+                  className="w-5 h-5 rounded-full object-cover"
+                  alt=""
+                />
+              </div>
+            ) : (
+              ""
+            )}
           </div>
+          <div className="hidden sm:flex">
+            {user && user?.email ? (
+              <div className="md:text-base text-xs font-medium  items-center justify-center">
+                {" "}
+                {user?.displayName}
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        </div>
 
         <div className="  border">
-        
           {/* login and logout toggle */}
           {user && user?.email ? (
             <div
