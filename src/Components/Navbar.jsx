@@ -1,0 +1,189 @@
+import React, { useContext } from "react";
+import { Authcontext } from "./Provider/Authprovider";
+import { MdFavoriteBorder, MdMenu } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import { IoIosHome } from "react-icons/io";
+import { SiBrandfolder } from "react-icons/si";
+import { CgProfile } from "react-icons/cg";
+import { FcAbout } from "react-icons/fc";
+import { MdReviews } from "react-icons/md";
+import { IoAddCircleOutline } from "react-icons/io5";
+
+const Navbar = () => {
+  const { user, logOutUser } = useContext(Authcontext);
+
+  // manubar links
+  const link = (
+    <>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "px-1 py-1 text-lg font-semibold flex gap-1 items-center"
+            : " flex gap-1 items-center"
+        }
+        to="/"
+      >
+        <span>
+          <IoIosHome></IoIosHome>
+        </span>
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            : "flex gap-1 items-center "
+        }
+        to="/allreview"
+      >
+        <MdReviews></MdReviews>
+        All Review
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            : " flex gap-1 items-center"
+        }
+        to="/addreview"
+      >
+        <IoAddCircleOutline />
+        Add Review
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            : " flex gap-1 items-center"
+        }
+        to="/myreview"
+      >
+       <CgProfile></CgProfile>
+        My Reviews
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            : " flex gap-1 items-center"
+        }
+        to="/wishlist"
+      >
+        <MdFavoriteBorder />
+        Game WatchList
+      </NavLink>
+    </>
+  );
+
+  return (
+    <div className="navbar px-0 mx-auto w-11/12 ">
+      <div className="navbar-start hidden sm:flex">
+        <a className="font-bold  text-3xl">Game Review</a>
+      </div>
+      {/* small device */}
+      <div className="navbar-start sm:hidden flex ">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            {/* <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 md:h-8 md:w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg> */}
+            <MdMenu className="mt-1 w-8"></MdMenu>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            {link}
+          </ul>
+        </div>
+      </div>
+
+      {/* small device  */}
+      <div className="navbar-center sm:hidden flex">
+        <a className="font-bold  text-xl">Game Review</a>
+      </div>
+      {/* large device */}
+      <div className="navbar-center hidden sm:flex items-center justify-between gap-3 ">
+        {link}
+      </div>
+
+        {/* user profile */}
+      <div className="navbar-end ml-1 flex items-center gap-4 ">
+            <div className="pro md:flex flex-col md:flex-row items-center justify-center ">
+            <div>
+              {user && user?.email ? (
+                <div className=" font-medium ">
+                  <img
+                    src={user?.photoURL}
+                    className="w-5 h-5 rounded-full object-cover"
+                    alt=""
+                  />
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+            <div className="hidden sm:flex">
+              {user && user?.email ? (
+                <div className="md:text-base text-xs font-medium  items-center justify-center">
+                  {" "}
+                  {user?.displayName}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
+
+        <div className="  border">
+        
+          {/* login and logout toggle */}
+          {user && user?.email ? (
+            <div
+              onClick={logOutUser}
+              className="cursor-pointer bg-[#F28A1D] text-base text-[#ffffff] px-3 py-1 rounded-sm"
+            >
+              Logout
+            </div>
+          ) : (
+            <div className="cursor-pointer flex flex-col sm:flex-row bg-[#F28A1D] px-0 py-1 rounded-sm">
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-base  px-3 py-1 bg-[#b4d4ff] font-bold"
+                    : "text-base font-bold rounded-md mx-2"
+                }
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to="/register"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-base px-3 py-1 bg-[#b4d4ff] w-full font-bold hidden md:flex"
+                    : "text-base font-bold rounded-md mx-2 hidden md:flex"
+                }
+              >
+                Register
+              </NavLink>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
