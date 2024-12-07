@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Swal from "sweetalert2";
+import { Authcontext } from "../Components/Provider/Authprovider";
 
 const AddReview = () => {
+  const { user } = useContext(Authcontext);
    const handleSubmit = event =>{
     event.preventDefault();
     const form = event.target;
@@ -126,7 +128,7 @@ const AddReview = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Enter Email"
+                  value={user?.email}
                   className="w-full input-accent px-5 py-1 rounded-md"
                 />
               </div>
@@ -135,7 +137,7 @@ const AddReview = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Enter User Name"
+                  value={user?.displayName}
                   className="w-full input-accent px-5 py-1 rounded-md"
                 />
               </div>

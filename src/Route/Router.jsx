@@ -35,7 +35,9 @@ const Router =createBrowserRouter([
         },
         {
           path: "/addreview",
-          element: <AddReview></AddReview>,
+          element:<PrivateRoute>
+            <AddReview></AddReview>
+          </PrivateRoute>,
         },
         {
           path: "/wishlist",
@@ -43,7 +45,7 @@ const Router =createBrowserRouter([
         },
         {
           path: "/allreview/:id",
-          element: <Details></Details>,
+          element: <PrivateRoute><Details></Details></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
         },
       ]

@@ -38,7 +38,7 @@ const Login = () => {
     googleSignIn()
     .then((result)=>{
       console.log(result.user);
-      navigate('/')
+      navigate(location?.state ? location?.state : "/");
     })
     .catch((error)=>{
      const errorMessage = error.message;
