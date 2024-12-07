@@ -10,7 +10,8 @@ const AddReview = () => {
     const image = form.image.value;
     const gamename = form.gamename.value;
     const description = form.description.value;
-    const rating = form.rating.value;
+    const ratingInt = form.rating.value;
+    const rating =parseFloat(ratingInt);
     const year = form.year.value;
     const genre = form.genre.value;
     const email = form.email.value;
@@ -79,6 +80,7 @@ const AddReview = () => {
                 <span className="ml-2 mt-2 mb-1 text-base font-semibold ">Rating</span>
                 <input
                   type="number"
+                  step="0.1"
                   name="rating"
                   placeholder="Enter Rating"
                   className="w-full input-accent px-5 py-1 rounded-md"
