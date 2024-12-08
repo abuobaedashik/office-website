@@ -15,6 +15,9 @@ const MyReviews = () => {
   const [datato, setdatato] = useState(
     mydata.filter((item) => item.email === user?.email)
   );
+  if (datato.length ===0) {
+     console.log("No Data Found");
+  }
 
   const handleDelete = (id) => {
     console.log(id);
@@ -69,35 +72,37 @@ const MyReviews = () => {
   return (
     <div>
       <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr className="bg-[#23f245]">
-              <th>Reviewer</th>
-              <th>Game Name</th>
-              <th className="">Email</th>
-              <th className="text-center">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* Render from state */}
-            {datato.map((data) => (
-              <tr key={data._id} className="bg-base-200">
-                <th>{data?.name}</th>
-                <td>{data?.gamename} </td>
-                <td className="">{data?.email}</td>
-                <td className="flex items-center gap-5 mr-4 justify-center text-xl font-bold ">
-                  <Link to={`/myreview/update/${data._id}`}>
-                    <MdUpdate />
-                  </Link>
-                  <p onClick={() => handleDelete(data._id)}>
-                    <MdDeleteForever />
-                  </p>
-                </td>
+        {
+          datato.length === 0 ? (<div className="text-center text-[#23f245] text-2xl font-bold mt-16 mb-40">You have No any Review</div>):( <table className="table">
+            {/* head */}
+            <thead>
+              <tr className="bg-[#23f245]">
+                <th>Reviewer</th>
+                <th>Game Name</th>
+                <th className="">Email</th>
+                <th className="text-center">Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {/* Render from state */}
+              {datato.map((data) => (
+                <tr key={data._id} className="bg-base-200">
+                  <th>{data?.name}</th>
+                  <td>{data?.gamename} </td>
+                  <td className="">{data?.email}</td>
+                  <td className="flex items-center gap-5 mr-4 justify-center text-xl font-bold ">
+                    <Link to={`/myreview/update/${data._id}`}>
+                      <MdUpdate />
+                    </Link>
+                    <p onClick={() => handleDelete(data._id)}>
+                      <MdDeleteForever />
+                    </p>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>)
+        }
       </div>
     </div>
   );
