@@ -1,83 +1,83 @@
 import React from "react";
-import { GrFavorite } from "react-icons/gr";
 import { MdFavorite } from "react-icons/md";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const Details = () => {
   const everyReview = useLoaderData();
-  const {
-    image,
-    gamename,
-    description,
-    rating,
-    year,
-    genre,
-    email,
-    name,
-  } = everyReview;
+  const { image, gamename, description, rating, year, genre, email, name } = everyReview;
+
+  const handleFavorite = (review) => {
+    fetch(`http://localhost:5000/watchlist`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(review),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to add to watchlist");
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        alert("Added to watchlist!");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Failed to add to watchlist");
+      });
+  };
+
   return (
-    <div>
-      {/* <img src={image} alt="" className='w-[full] h-[400px]'/> */}
-      <div className="flex justify-center mt-5 mb-10 flex-col sm:flex-row gap-[5%]">
-        <div className="image-sec w-[45%]">
-          <img src={image} alt="" className="w-[full] h-[600px]" />
-        </div>
-        {/* right side */}
-        <div className="text-sec w-[45%]  flex flex-col items-start gap-1">
-          <div className="mt-4 text-3xl font-bold flex items-center">{gamename} <span className="text-2xl font-medium ml-3 mt-1">({year})</span></div>
-          <h2 className="text-sm font-medium">Revier {name}</h2>
-          <h2 className="text-sm font-medium">Revier Email {email}</h2>
-          <h2 className="flex items-center gap-2 text-base font-normal ">
-            <div className="rating">
-              <input
-                type="radio"
-                name="rating-4"
-                className="mask mask-star-2 w-3 h-3 bg-yellow-400"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                className="mask mask-star-2 w-3 h-3 bg-yellow-400"
-                defaultChecked
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                className="mask mask-star-2 w-3 h-3 bg-yellow-400"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                className="mask mask-star-2 w-3 h-3 bg-yellow-400"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                className="mask mask-star-2 w-3 h-3 bg-yellow-400"
-              />
-            </div>
-            <p>({rating}/10)</p>
-          </h2>
-          <h2 className="text-base mt-5 pr-4  text-justify">
-          <div className="font-bold mr-2">{gamename} Review</div> {description.slice(0,250)}
-            <p>
-            {gamename} is a highly engaging and action-packed shooting game that delivers a {genre} for fans of the genre. With its cinematic graphics, intense gameplay, and offline mode, it stands out as one of the best mobile shooting games available.
-            </p>
-          </h2>
-          <h2 className="text-base mt-3 pr-4  text-justify">
-           <div className="font-bold mr-2">Gameplay</div>The gameplay is fast-paced and mission-oriented, where players take on roles of elite soldiers to complete diverse objectives. The controls are smooth and intuitive, ensuring precision in every move. Each mission offers unique challenges, from sniper tasks to all-out assaults, keeping the game exciting throughout.
-          </h2>
+    <div className="flex justify-center mt-5 mb-10 flex-col sm:flex-row gap-[5%]">
+      {/* Left Side */}
+      <div className="image-sec w-[45%]">
+        <img src={image} alt={gamename} className="w-full h-[600px] object-cover" />
+      </div>
 
-        <div className="flex items-center justify-start gap-4">
-         <h2 className="text-base px-4 py-1 rounded-lg font-semibold bg-[#2edc14d4] mt-3">
-            {genre}
-          </h2>
-          <Link  className="text-base px-2 py-2 rounded-lg font-semibold bg-[#2edc14d4] mt-3">
-            <MdFavorite />
-          </Link>
+      {/* Right Side */}
+      <div className="text-sec w-[45%] flex flex-col items-start gap-2">
+        <h1 className="text-3xl font-bold">
+          {gamename} <span className="text-2xl font-medium ml-3">({year})</span>
+        </h1>
+        <h2 className="text-sm font-medium">Reviewer: {name}</h2>
+        <h2 className="text-sm font-medium">Reviewer Email: {email}</h2>
+        
+        {/* Rating Section */}
+        <div className="flex items-center gap-2">
+          <div className="rating flex">
+            {[...Array(5)].map((_, i) => (
+              <input
+                key={i}
+                type="radio"
+                name="rating"
+                className={`mask mask-star-2 w-3 h-3 ${i < rating ? "bg-yellow-400" : "bg-gray-300"}`}
+                disabled
+              />
+            ))}
+          </div>
+          <p className="text-base font-semibold">({rating}/10)</p>
         </div>
 
-        </div>
+        {/* Genre */}
+        <span className="text-base px-4 py-1 font-semibold border-2 rounded-md border-[#2edc14d4]">
+          {genre}
+        </span>
+
+        {/* Description */}
+        <p className="mt-4 text-justify">
+          <strong>{gamename} Review:</strong> {description.slice(0, 250)}
+        </p>
+
+        <p className="mt-2 text-justify">
+          <strong>Gameplay:</strong> The gameplay is fast-paced and mission-oriented, where players take on roles of elite soldiers to complete diverse objectives. The controls are smooth and intuitive, ensuring precision in every move. Each mission offers unique challenges, from sniper tasks to all-out assaults, keeping the game exciting throughout.
+        </p>
+
+        {/* Watchlist Button */}
+        <button
+          onClick={() => handleFavorite(everyReview)}
+          className="text-base px-4 py-2 flex items-center gap-2 rounded-lg font-semibold bg-[#2edc14d4] mt-3"
+        >
+          <MdFavorite /> My Watchlist
+        </button>
       </div>
     </div>
   );

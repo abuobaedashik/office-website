@@ -13,11 +13,11 @@ const MyReviews = () => {
 
   // Filtered user data stored in state
   const [datato, setdatato] = useState(
-    mydata.filter((item) => item.email === user?.email)
+  mydata.filter((item) => item.email === user?.email)
   );
-  if (datato.length ===0) {
-     console.log("No Data Found");
-  }
+  // if (datato.length ===0) {
+  //    console.log("No Data Found");
+  // }
 
   const handleDelete = (id) => {
     console.log(id);
