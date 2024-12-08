@@ -71,7 +71,7 @@ const Navbar = () => {
         to="/wishlist"
       >
         <MdFavoriteBorder />
-        Game WatchList
+        WatchList
       </NavLink>
     </>
   );

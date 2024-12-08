@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { GrUpdate } from "react-icons/gr";
-import { MdDeleteForever } from "react-icons/md";
+import { MdDeleteForever, MdUpdate } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Authcontext } from "../Components/Provider/Authprovider";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const MyReviews = () => {
   const mydata = useLoaderData();
@@ -87,9 +87,9 @@ const MyReviews = () => {
                 <td>{data?.gamename} </td>
                 <td className="">{data?.email}</td>
                 <td className="flex items-center gap-5 mr-4 justify-center text-xl font-bold ">
-                  <p>
-                    <GrUpdate />
-                  </p>
+                  <Link to={`/myreview/update/${data._id}`}>
+                    <MdUpdate />
+                  </Link>
                   <p onClick={() => handleDelete(data._id)}>
                     <MdDeleteForever />
                   </p>

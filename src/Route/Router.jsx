@@ -12,6 +12,7 @@ import PrivateRoute from './PrivateRoute';
 import Details from '../Pages/Details';
 import { TbError404, TbError404Off } from "react-icons/tb";
 import { BiErrorCircle } from "react-icons/bi"
+import Update from '../Pages/Update';
 
 const Router =createBrowserRouter([
     {
@@ -47,6 +48,11 @@ const Router =createBrowserRouter([
           path: "/allreview/:id",
           element: <PrivateRoute><Details></Details></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
+        },
+        {
+          path: "/myreview/update/:id",
+          element: <Update></Update>,
+          loader:({params})=>fetch(`http://localhost:5000/update/${params.id}`)
         },
       ]
     },
