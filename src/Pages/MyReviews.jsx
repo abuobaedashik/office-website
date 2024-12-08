@@ -42,7 +42,7 @@ const MyReviews = () => {
       .then((result) => {
         if (result.isConfirmed) {
           console.log("delete successfull");
-          fetch(`http://localhost:5000/reviews/${id}`, {
+          fetch(`https://game-review-server-mauve.vercel.app/reviews/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())

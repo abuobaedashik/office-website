@@ -18,7 +18,7 @@ const AddReview = () => {
     const name = form.name.value;
     const newReviews = {image,gamename,description,rating,year,genre,email, name};
     console.log(newReviews);
-    fetch('http://localhost:5000/reviews',{
+    fetch('https://game-review-server-mauve.vercel.app/reviews',{
         method:'POST',
         headers:{
           'content-type':'application/json'},

@@ -7,7 +7,7 @@ const Details = () => {
   const { image, gamename, description, rating, year, genre, email, name } = everyReview;
 
   const handleFavorite = (review) => {
-    fetch(`http://localhost:5000/watchlist`, {
+    fetch(`https://game-review-server-mauve.vercel.app/watchlist`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(review),

@@ -22,17 +22,17 @@ const Router =createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
-          loader: ()=>fetch('http://localhost:5000/reviews-sort')
+          loader: ()=>fetch('https://game-review-server-mauve.vercel.app/reviews-sort')
         },
         {
           path: "/allreview",
           element:<AllReview></AllReview>,
-          loader:()=>fetch('http://localhost:5000/reviews')
+          loader:()=>fetch('https://game-review-server-mauve.vercel.app/reviews')
         },
         {
           path: "/myreview",
           element:<PrivateRoute><MyReviews></MyReviews></PrivateRoute>,
-          loader: ()=>fetch('http://localhost:5000/reviews')
+          loader: ()=>fetch('https://game-review-server-mauve.vercel.app/reviews')
         },
         {
           path: "/addreview",
@@ -43,17 +43,17 @@ const Router =createBrowserRouter([
         {
           path: "/wishlist",
           element: <PrivateRoute><WishList></WishList></PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/watchlist')
+          loader:()=>fetch('https://game-review-server-mauve.vercel.app/watchlist')
         },
         {
           path: "/allreview/:id",
           element: <PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
+          loader:({params})=>fetch(`https://game-review-server-mauve.vercel.app/reviews/${params.id}`)
         },
         {
           path: "/myreview/update/:id",
           element: <Update></Update>,
-          loader:({params})=>fetch(`http://localhost:5000/update/${params.id}`)
+          loader:({params})=>fetch(`https://game-review-server-mauve.vercel.app/update/${params.id}`)
         },
       ]
     },

@@ -29,7 +29,7 @@ const Update = () => {
     const name = form.name.value;
     const updatedReview = {image,gamename,description,rating,year,genre,email, name};
     console.log(updatedReview);
-    fetch(`http://localhost:5000/update/${Data._id}`,{
+    fetch(`https://game-review-server-mauve.vercel.app/update/${Data._id}`,{
         method:'PUT',
         headers:{
           'content-type':'application/json'},

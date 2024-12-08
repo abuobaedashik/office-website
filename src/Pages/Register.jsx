@@ -3,11 +3,13 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import googleLogo from '../assets/googleicon.png'
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Authcontext } from "../Components/Provider/Authprovider";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
 const { createUser, setuser ,googleSignIn,updateUserProfile } = useContext(Authcontext);
     const [show,setshow] =useState(false)
     // const location = useLocation();
+    const [err, seterr] = useState("");
     const navigate = useNavigate();
     const handleSubmit =(event)=>{
         event.preventDefault()
@@ -18,6 +20,28 @@ const { createUser, setuser ,googleSignIn,updateUserProfile } = useContext(Authc
         const password = form.password.value;
         const user ={name,email,photo,password}
         console.log(user);
+        seterr('')
+
+        if (password.length <6) {
+          seterr("password langth should be 6")
+          toast.error(`${err}`, {
+            position: "top-center"
+          });
+          // console.log(err);
+            return;
+          } 
+
+
+          
+      const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+      if (!regex.test(password)) {
+        seterr("At Least one UpperCase, one LowerCase and should be six characters long");
+        toast.error(`${err}`, {
+          position: "top-center"
+        });
+        // console.log(err);
+        return;
+      }
 
 
         createUser(email, password)
@@ -36,7 +60,11 @@ const { createUser, setuser ,googleSignIn,updateUserProfile } = useContext(Authc
         })
         .catch((error) => {
   
-          alert('error',error)
+          const errorMessage = error.message;
+          seterr(error.message);
+          toast.error(`${errorMessage}`, {
+            position: "top-center"
+          });
             
         });   
     }
@@ -114,7 +142,7 @@ const { createUser, setuser ,googleSignIn,updateUserProfile } = useContext(Authc
                 {show ? <IoMdEye></IoMdEye> : <IoMdEyeOff></IoMdEyeOff>}
               </div>
             </div>
-            {/* {err && <label className="label text-xs text-red-500">{err}</label>} */}
+            {err && <label className="label text-xs text-red-500">{err}</label>}
             <div className="form-control mt-3">
               <button className="btn btn-accent bg-[#616EF1] rounded-md text-[#ffffff]">
                 Register

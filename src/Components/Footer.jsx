@@ -5,9 +5,10 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
 const Footer = () => {
   return (
-    <div className="bg-[#222222] text-[#ffffff] pb-5">
+    <div className="bg-[#23f245] text-[#ffffffc7] pb-5">
       <footer className="grid grid-cols-1 md:grid-cols-3 text-left gap-8 px-5 pt-10 border-b pb-12 mx-auto w-[95%] border-[#353535]">
         {/* Contact Info */}
         <nav className="flex flex-col gap-4 items-start">
@@ -75,11 +76,15 @@ const Footer = () => {
           per inceptos himenaeos. Cras eleifend egestas justo.
         </p>
         <div className="flex items-center justify-center gap-5 mt-6 text-xl">
-          <FaFacebookF className="hover:text-[#F49D40]" />
+          <FaFacebookF id="my-tooltip" className="hover:text-[#F49D40]" />
           <FaGithub className="hover:text-[#F49D40]" />
           <FaGoogle className="hover:text-[#F49D40]" />
           <FaInstagram className="hover:text-[#F49D40]" />
           <FaTwitter className="hover:text-[#F49D40]" />
+        </div>
+        <div className="text-center flex items-center text-sm mt-4">
+          {" "}
+          © 2024 Abu Obaed Ashik. All Rights Reserved.
         </div>
       </footer>
 

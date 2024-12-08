@@ -13,7 +13,7 @@ const AllReview = () => {
   
   const handleAssending=()=>{
      console.log("assend");
-     fetch('http://localhost:5000/reviews-asen')
+     fetch('https://game-review-server-mauve.vercel.app/reviews-asen')
      .then(res=>res.json())
      .then(data=>{
       console.log("assending",data)
@@ -23,7 +23,7 @@ const AllReview = () => {
   }
   const handleDessending =()=>{
     console.log("dessen");
-    fetch('http://localhost:5000/reviews-dsen')
+    fetch('https://game-review-server-mauve.vercel.app/reviews-dsen')
     .then(res=>res.json())
     .then(data=>{
       console.log("desending",data)
@@ -35,12 +35,12 @@ const AllReview = () => {
  
 
   return (
-    <div>
+    <div className="mx-0 w-full mb-6  overflow-hidden">
       <div className="mt-5 mb-3">
           <div className="text-2xl text-center font-bold mb-4">All Review</div>
           <div className="text-base text-[#23f245] text-] text-center">The reviews highlight a diverse range of user opinions on popular games, emphasizing immersive gameplay, stunning graphics, and intuitive controls. Many users praised the action-packed missions and engaging storylines, particularly in shooter and adventure genres. Offline mode and multiplayer options were noted as standout features, though some suggested improvements in mission variety and reduced loading times. Reviewers also appreciated detailed environments and customization options, adding to the games replay value. Overall, the reviews provide valuable insights into the strengths and areas for improvement in modern gaming experiences.</div>
       </div>
-      <div className="sortandfilter flex items-center justify-between px-5 pt-2 pb-8  font-medium ">
+      <div className="sortandfilter flex items-center justify-between pt-2 pb-8 w-full  font-medium ">
         <div className="sort">
           {/* sort */}
           <div className="dropdown">
@@ -80,7 +80,7 @@ const AllReview = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2">
         {/* {reviews.map((review) => (
           <Review key={reviews._id} review={review}></Review>
         ))} */}

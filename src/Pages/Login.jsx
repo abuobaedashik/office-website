@@ -4,6 +4,8 @@ import googleLogo from "../assets/googleicon.png";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Authcontext } from "../Components/Provider/Authprovider";
 import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { SignInUser, setuser, googleSignIn } = useContext(Authcontext);
@@ -22,11 +24,17 @@ const Login = () => {
     .then((result) => {
       const user = result.user;
       setuser(user);
+      Swal.fire({
+        title: "Login Successful",
+        text: "user login",
+        icon: "Success"
+      });
       navigate(location?.state ? location?.state : "/");
     })
 
 
     .catch((error) => {
+        seterr(error.message);
         seterr(error.message);
         toast.success(`${error.message}`, {
           position: "top-center",
