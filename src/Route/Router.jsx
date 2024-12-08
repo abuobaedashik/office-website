@@ -42,7 +42,7 @@ const Router =createBrowserRouter([
         },
         {
           path: "/wishlist",
-          element: <WishList></WishList>,
+          element: <PrivateRoute><WishList></WishList></PrivateRoute>,
           loader:()=>fetch('http://localhost:5000/watchlist')
         },
         {
