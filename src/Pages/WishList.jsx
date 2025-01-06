@@ -6,11 +6,11 @@ import ListDesign from "../Components/ListDesign";
 const WishList = () => {
   const wishList = useLoaderData();
   const { user } = useContext(Authcontext);
-  console.log("total get ", wishList);
+  // console.log("total get ", wishList);
 
   const myWishlist =
     wishList?.filter((item) => item.email === user?.email) || [];
-  console.log(myWishlist);
+  // console.log(myWishlist);
   return (
     <div>
       {myWishlist.length === 0 ? (

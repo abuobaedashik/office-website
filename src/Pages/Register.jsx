@@ -72,7 +72,7 @@ const { createUser, setuser ,googleSignIn,updateUserProfile } = useContext(Authc
     const handleGoogleSignIn =()=>{
         googleSignIn()
         .then((result)=>{
-          console.log(result.user);
+          // console.log(result.user);
           Navigate('/')
         })
     } 

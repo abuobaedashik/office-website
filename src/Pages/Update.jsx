@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const Update = () => {
     const {user} =useContext(Authcontext)
     const Data = useLoaderData();
-    console.log(Data);
+    // console.log(Data);
         const {
       image,
       gamename,
@@ -28,7 +28,7 @@ const Update = () => {
     const email = form.email.value;
     const name = form.name.value;
     const updatedReview = {image,gamename,description,rating,year,genre,email, name};
-    console.log(updatedReview);
+    // console.log(updatedReview);
     fetch(`https://game-review-server-mauve.vercel.app/update/${Data._id}`,{
         method:'PUT',
         headers:{
@@ -37,7 +37,7 @@ const Update = () => {
       })
       .then(res=>res.json())
      .then(data=>{
-        console.log(data);
+        // console.log(data);
        if (data.modifiedCount >0) {
         Swal.fire({
             title: "Thanks",

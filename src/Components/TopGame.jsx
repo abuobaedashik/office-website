@@ -10,8 +10,8 @@ const TopGame = ({ topsix }) => {
   return (
     <div className="">
       <div
-        className="card bg-[#3C3D37]
-       text-neutral-content shadow-xl"
+        className="card text-[#131313] bg-[#E0D3F1]
+       shadow-xl"
       >
         <figure>
           <img
@@ -21,10 +21,10 @@ const TopGame = ({ topsix }) => {
           />
         </figure>
         <div className="card-body p-4">
-          <div className="name-riview flex items-center justify-between">
+          <div className="name-riview flex items-center flex-col justify-between">
             <div className="name">
               <h2 className="card-title text-lg font-semibold">{gamename}</h2>
-              <p className="text-sm text-left  text-gray-400">{name}</p>
+              <p className="text-sm text-left ">{name}</p>
             </div>
             <div className="review flex items-center gap-2">
               <div className="rating">
@@ -59,10 +59,10 @@ const TopGame = ({ topsix }) => {
             </div>
           </div>
           <div className="card-actions justify-between mt-3">
-            <button className="btn btn-primary btn-sm">{genre}</button>
+            <button className="btn bg-[#47CD36] btn-sm">{genre}</button>
             <Link
               to={`/allreview/${_id}`}
-              className="btn btn-secondary btn-sm flex items-center gap-1"
+              className="btn bg-[#47CD36] btn-sm flex items-center gap-1"
             >
               <AiOutlineInfoCircle size={18} />
               Explore Details

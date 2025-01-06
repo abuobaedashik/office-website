@@ -77,7 +77,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar px-0 mx-auto w-11/12 ">
+    <div className="navbar fixed z-10 px-12 bg-[#ffffff] w-full border border-red-500">
       <div className="navbar-start hidden sm:flex">
         <a className="font-bold  text-3xl">Game Review</a>
       </div>

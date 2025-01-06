@@ -9,19 +9,21 @@ const Home = () => {
   const topGame = useLoaderData();
 
   return (
-    <div className="">
-      <Banner></Banner>
+    <div className="mt-0 ">
+      <div className="">
+       <Banner></Banner>
+      </div>
       {/* Highest Rated Gam section */}
-      <div className="my-20 text-center">
+      <div className="my-20 text-center w-11/12 mx-auto">
         <div className="title text-2xl font-bold">
           A Glimpse into the World of Highest-Rated Games
         </div>
         <div className="title text-base font-normal mt-3 mb-6">
-          The gaming add industry has become a massive source of entertainment
+         Chillllllll The gaming add industry has become a massive source of entertainment
           worldwide. Many games have captured the hearts of gamers due to their
           storylines, graphics, gameplay, and innovative features.
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-3 sm:grid-cols-2 items-center">
+        <div className="grid md:grid-cols-4 grid-cols-1 gap-3 sm:grid-cols-2 items-center">
           {topGame.map((topsix) => (
             <TopGame key={topsix._id} topsix={topsix}></TopGame>
           ))}

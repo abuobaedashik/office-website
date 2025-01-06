@@ -17,7 +17,7 @@ const AddReview = () => {
     const email = form.email.value;
     const name = form.name.value;
     const newReviews = {image,gamename,description,rating,year,genre,email, name};
-    console.log(newReviews);
+    // console.log(newReviews);
     fetch('https://game-review-server-mauve.vercel.app/reviews',{
         method:'POST',
         headers:{

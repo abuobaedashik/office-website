@@ -8,15 +8,15 @@ const AllReview = () => {
   const [desending,setdesending]=useState([]);
   const [currentView, setCurrentView] = useState("default");
   
-  console.log(reviews.length);
-  console.log({assending,desending});
+  // console.log(reviews.length);
+  // console.log({assending,desending});
   
   const handleAssending=()=>{
-     console.log("assend");
+    //  console.log("assend");
      fetch('https://game-review-server-mauve.vercel.app/reviews-asen')
      .then(res=>res.json())
      .then(data=>{
-      console.log("assending",data)
+      // console.log("assending",data)
       setassending(data)
       setCurrentView("ascending");
      })
@@ -26,7 +26,7 @@ const AllReview = () => {
     fetch('https://game-review-server-mauve.vercel.app/reviews-dsen')
     .then(res=>res.json())
     .then(data=>{
-      console.log("desending",data)
+      // console.log("desending",data)
       setdesending(data)
       setCurrentView("descending");
     })
@@ -80,7 +80,7 @@ const AllReview = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2 mb-6">
         {/* {reviews.map((review) => (
           <Review key={reviews._id} review={review}></Review>
         ))} */}

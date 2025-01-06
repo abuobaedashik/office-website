@@ -17,7 +17,7 @@ const Details = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         alert("Added to watchlist!");
       })
       .catch((error) => {
@@ -29,12 +29,12 @@ const Details = () => {
   return (
     <div className="flex justify-center mt-5 mb-10 flex-col sm:flex-row gap-[5%]">
       {/* Left Side */}
-      <div className="image-sec w-[45%]">
+      <div className="image-sec sm:w-[45%]">
         <img src={image} alt={gamename} className="w-full h-[600px] object-cover" />
       </div>
 
       {/* Right Side */}
-      <div className="text-sec w-[45%] flex flex-col items-start gap-2">
+      <div className="text-sec sm:w-[45%] flex flex-col items-start gap-2">
         <h1 className="text-3xl font-bold">
           {gamename} <span className="text-2xl font-medium ml-3">({year})</span>
         </h1>

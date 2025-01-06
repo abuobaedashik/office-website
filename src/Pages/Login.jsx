@@ -45,12 +45,12 @@ const Login = () => {
   const handleGoogleSignIn =()=>{
     googleSignIn()
     .then((result)=>{
-      console.log(result.user);
+      // console.log(result.user);
       navigate(location?.state ? location?.state : "/");
     })
     .catch((error)=>{
      const errorMessage = error.message;
-     console.log(errorMessage);
+    //  console.log(errorMessage);
     })
   }
   return (

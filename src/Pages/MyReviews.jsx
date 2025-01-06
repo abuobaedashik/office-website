@@ -7,9 +7,9 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const MyReviews = () => {
   const mydata = useLoaderData();
-  console.log(mydata);
+  // console.log(mydata);
   const { user } = useContext(Authcontext);
-  console.log(user?.email);
+  // console.log(user?.email);
 
   // Filtered user data stored in state
   const [datato, setdatato] = useState(
@@ -20,7 +20,7 @@ const MyReviews = () => {
   // }
 
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
 
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -41,7 +41,7 @@ const MyReviews = () => {
       })
       .then((result) => {
         if (result.isConfirmed) {
-          console.log("delete successfull");
+          // console.log("delete successfull");
           fetch(`https://game-review-server-mauve.vercel.app/reviews/${id}`, {
             method: "DELETE",
           })
@@ -73,7 +73,11 @@ const MyReviews = () => {
     <div>
       <div className="overflow-x-auto">
         {
-          datato.length === 0 ? (<div className="text-center text-[#23f245] text-2xl font-bold mt-16 mb-40">You have No any Review</div>):( <table className="table">
+          datato.length === 0 ? (<div className="text-center text-[#23f245] text-2xl font-bold mt-16 mb-40"><div>You haven't added any car</div>
+          <div></div>
+          </div>
+           
+          ):( <table className="table">
             {/* head */}
             <thead>
               <tr className="bg-[#23f245]">
@@ -103,6 +107,7 @@ const MyReviews = () => {
             </tbody>
           </table>)
         }
+        
       </div>
     </div>
   );
