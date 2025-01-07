@@ -9,6 +9,7 @@ import { FcAbout } from "react-icons/fc";
 import { MdReviews } from "react-icons/md";
 import { IoAddCircleOutline } from "react-icons/io5";
 import ThemeControl from "./ThemeControl";
+import logo from "../assets/download-removebg-preview.png";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(Authcontext);
@@ -79,7 +80,7 @@ const Navbar = () => {
   return (
     <div className="navbar fixed z-10 px-12 bg-[#ffffff] w-full border border-red-500">
       <div className="navbar-start hidden sm:flex">
-        <a className="font-bold  text-3xl">Game Review</a>
+        <a className="font-bold  text-3xl"><img src={logo} alt="" className="w-12 h-12 rounded-full border border-[#131313]" /></a>
       </div>
       {/* small device */}
       <div className="navbar-start sm:hidden flex ">
@@ -112,7 +113,7 @@ const Navbar = () => {
 
       {/* small device  */}
       <div className="navbar-center sm:hidden flex">
-        <a className="font-bold  text-xl">Game Review</a>
+        <a className="font-bold  text-xl"><img src={logo} alt="" /></a>
       </div>
       {/* large device */}
       <div className="navbar-center hidden sm:flex items-center justify-between gap-3 ">

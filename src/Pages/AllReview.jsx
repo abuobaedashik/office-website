@@ -80,7 +80,7 @@ const AllReview = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2 mb-6">
         {/* {reviews.map((review) => (
           <Review key={reviews._id} review={review}></Review>
         ))} */}
