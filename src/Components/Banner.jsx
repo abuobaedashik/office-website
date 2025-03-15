@@ -1,55 +1,32 @@
-import img1 from '../assets/Magicka-Review.webp';
-import img2 from '../assets/unnamed.webp';
-import img3 from '../assets/hq720.jpg';
-import img4 from '../assets/valheim-review.webp';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import img1 from "../assets/Magicka-Review.webp";
+import img2 from "../assets/unnamed.webp";
+import img3 from "../assets/hq720.jpg";
+import img4 from "../assets/valheim-review.webp";
+import img5 from "../assets/image.jpg";
 
 const Banner = () => {
   return (
-    <div className="">
-      <Swiper
-        pagination={{
-          type: 'fraction',
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper h-[400px] "  // Ensure height is fixed here
-      >
-        <SwiperSlide>
-          <img
-            src={img1}
-            alt="Image 1"
-            className="w-full h-full object-fill "  // Cover ensures full width/height
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src={img2}
-            alt="Image 2"
-            className="w-full h-full object-fill"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src={img3}
-            alt="Image 3"
-            className="w-full h-full object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src={img4}
-            alt="Image 4"
-            className="w-full h-full object-fill"
-          />
-        </SwiperSlide>
-      </Swiper>
+    <div className="bg-[#FAF0F0] mb-24  mx-auto ">
+      <div className="mx-auto w-11/12 flex flex-col md:flex-row justify-between py-24 items-center">
+        <div className="md:w-[45%]">
+          <div className="mt-5 text-5xl font-extrabold font-custom mb-6">
+            Upgrade Your Skills & Conquer the Tech World
+          </div>
+          <div className="mt-2 text-xl font-nunito">
+            Step into the future with confidence! Master the latest
+            technologies, enhance your expertise, and become a leader in the
+            ever-evolving digital landscape. The world of innovation awaits—are
+            you ready to take charge?
+          </div>
+          <div className="mt-2 text-xl font-nunito flex items-center  gap-3">
+          <button className="btn bg-[#FF1E1E] text-[#ffffff]" >Browse Course</button>
+          <button className="btn bg-[#FF1E1E] text-[#ffffff]" >Join Free Seminar</button>
+          </div>
+        </div>
+        <div className="md:w-[45%]">
+          <img src={img5} alt="img" className="sm:min-w-[600px]  h-[350px] object-cover rounded-t-md rounded-b-xl" />
+        </div>
+      </div>
     </div>
   );
 };

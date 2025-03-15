@@ -1,18 +1,13 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from '../Pages/Home';
-import AllReview from '../Pages/AllReview';
-import MyReviews from '../Pages/MyReviews';
-import AddReview from '../Pages/AddReview';
-import WishList from '../Pages/WishList';
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
 import MainLayout from '../Pages/MainLayout';
 import PrivateRoute from './PrivateRoute';
-import Details from '../Pages/Details';
 import { TbError404, TbError404Off } from "react-icons/tb";
 import { BiErrorCircle } from "react-icons/bi"
-import Update from '../Pages/Update';
+
 
 const Router =createBrowserRouter([
     {
@@ -22,39 +17,8 @@ const Router =createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
-          loader: ()=>fetch('https://game-review-server-mauve.vercel.app/reviews-sort')
         },
-        {
-          path: "/allreview",
-          element:<AllReview></AllReview>,
-          loader:()=>fetch('https://game-review-server-mauve.vercel.app/reviews')
-        },
-        {
-          path: "/myreview",
-          element:<PrivateRoute><MyReviews></MyReviews></PrivateRoute>,
-          loader: ()=>fetch('https://game-review-server-mauve.vercel.app/reviews')
-        },
-        {
-          path: "/addreview",
-          element:<PrivateRoute>
-            <AddReview></AddReview>
-          </PrivateRoute>,
-        },
-        {
-          path: "/wishlist",
-          element: <PrivateRoute><WishList></WishList></PrivateRoute>,
-          loader:()=>fetch('https://game-review-server-mauve.vercel.app/watchlist')
-        },
-        {
-          path: "/allreview/:id",
-          element: <PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params})=>fetch(`https://game-review-server-mauve.vercel.app/reviews/${params.id}`)
-        },
-        {
-          path: "/myreview/update/:id",
-          element: <Update></Update>,
-          loader:({params})=>fetch(`https://game-review-server-mauve.vercel.app/update/${params.id}`)
-        },
+    
       ]
     },
     {

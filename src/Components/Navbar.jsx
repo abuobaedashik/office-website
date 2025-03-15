@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Authcontext } from "./Provider/Authprovider";
 import { MdFavoriteBorder, MdMenu } from "react-icons/md";
 import { NavLink } from "react-router-dom";
@@ -13,6 +13,22 @@ import logo from "../assets/download-removebg-preview.png";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(Authcontext);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // manubar links
   const link = (
@@ -36,10 +52,10 @@ const Navbar = () => {
             ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
             : "flex gap-1 items-center "
         }
-        to="/allreview"
+        to="/about"
       >
         <MdReviews></MdReviews>
-        All Review
+        About Us
       </NavLink>
       <NavLink
         className={({ isActive }) =>
@@ -47,10 +63,10 @@ const Navbar = () => {
             ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
             : " flex gap-1 items-center"
         }
-        to="/addreview"
+        to="/contact"
       >
         <IoAddCircleOutline />
-        Add Review
+         Contact
       </NavLink>
       <NavLink
         className={({ isActive }) =>
@@ -58,29 +74,26 @@ const Navbar = () => {
             ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
             : " flex gap-1 items-center"
         }
-        to="/myreview"
+        to="/course"
       >
         <CgProfile></CgProfile>
-        My Reviews
-      </NavLink>
-      <NavLink
-        className={({ isActive }) =>
-          isActive
-            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
-            : " flex gap-1 items-center"
-        }
-        to="/wishlist"
-      >
-        <MdFavoriteBorder />
-        WatchList
+         Our Course 
       </NavLink>
     </>
   );
 
   return (
-    <div className="navbar fixed z-10 px-12 bg-[#ffffff] w-full border border-red-500">
+    <div
+    className={`navbar   md:max-w-[1920px]  fixed z-50 md:py-6 py-2  sm:mb-2 transition-all duration-300 ${
+      isScrolled
+        ? "bg-[#FFFFFF]  navbar max-w-[1920px]  fixed z-10 "
+        : "bg-[#FAF0F0]"
+    }`}
+   >
+
       <div className="navbar-start hidden sm:flex">
-        <a className="font-bold  text-3xl"><img src={logo} alt="" className="w-12 h-12 rounded-full border border-[#131313]" /></a>
+        <a className="font-bold  text-3xl"><img src={logo} alt="" className="w-12 h-12 rounded-full" /></a>
+        <p className="text-xl font-bold "> <span className="text-2xl font-custom  text-[#FF1E1E]">P&P</span> IT Zone</p>
       </div>
       {/* small device */}
       <div className="navbar-start sm:hidden flex ">
