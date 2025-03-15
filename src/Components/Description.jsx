@@ -9,7 +9,7 @@ const Description = () => {
         <div>
              <div className="mt-6 text-4xl text-center font-bold  font-custom">Find Your Career Direction</div>
 
-             <div className="mt-8 text-xl flex items-center justify-between gap-3">
+             <div className="mt-8 text-xl flex items-center justify-between gap-3 flex-col md:flex-row p-3">
                 {/* c1 */}
                  <div className='flex items-center justify-between gap-5 p-2 px-4 bg-[#F3CFCF] rounded-lg'>
                    <div><img src={design} alt=""  className='w-[80px] h-[80px]'/></div>

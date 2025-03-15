@@ -14,6 +14,7 @@ import logo from "../assets/download-removebg-preview.png";
 const Navbar = () => {
   const { user, logOutUser } = useContext(Authcontext);
   const [isScrolled, setIsScrolled] = useState(false);
+  const todayDate = new Date().toLocaleDateString();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +67,7 @@ const Navbar = () => {
         to="/contact"
       >
         <IoAddCircleOutline />
-         Contact
+        Contact
       </NavLink>
       <NavLink
         className={({ isActive }) =>
@@ -77,29 +78,52 @@ const Navbar = () => {
         to="/course"
       >
         <CgProfile></CgProfile>
-         Our Course 
+        Our Course
       </NavLink>
     </>
   );
 
   return (
-    <div
-    className={`navbar   md:max-w-[1920px]  fixed z-50 md:py-6 py-2  sm:mb-2 transition-all duration-300 ${
-      isScrolled
-        ? "bg-[#FFFFFF]  navbar max-w-[1920px]  fixed z-10 "
-        : "bg-[#FAF0F0]"
-    }`}
-   >
-
-      <div className="navbar-start hidden sm:flex">
-        <a className="font-bold  text-3xl"><img src={logo} alt="" className="w-12 h-12 rounded-full" /></a>
-        <p className="text-xl font-bold "> <span className="text-2xl font-custom  text-[#FF1E1E]">P&P</span> IT Zone</p>
+    <div>
+      <div
+        className={`navbar text-base text-[#ffff] font-bold bg-[#ff1e1e] py-5   md:max-w-[1920px]  ${
+          isScrolled ? "flex navbar max-w-[1920px] delay-150  fixed z-10" : ""
+        }`}
+      >
+        <div className="flex px-12 items-center justify-between w-full">
+          <div className="flex gap-3 items-center">
+            <p>+8801765262296</p>
+            <p>abuobaedashik@gmail.com</p>
+          </div>
+          <p>Date:{todayDate}</p>
+        </div>
       </div>
-      {/* small device */}
-      <div className="navbar-start sm:hidden flex ">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            {/* <svg
+      <div
+        className={`navbar   md:max-w-[1920px]  fixed z-50 md:py-6 py-2  sm:mb-2 transition-all duration-300 ${
+          isScrolled
+            ? "bg-[#FFFFFF]  navbar max-w-[1920px]  fixed z-10 "
+            : "bg-[#66D2CE]"
+        }`}
+      >
+        <div className="navbar-start hidden sm:flex">
+          <a className="font-bold  text-3xl">
+            <img src={logo} alt="" className="w-12 h-12 rounded-full" />
+          </a>
+          <p className="text-xl font-bold ">
+            {" "}
+            <span className="text-2xl font-custom  text-[#FF1E1E]">P&P</span> IT
+            Zone
+          </p>
+        </div>
+        {/* small device */}
+        <div className="navbar-start sm:hidden flex ">
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle"
+            >
+              {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 md:h-8 md:w-8"
               fill="none"
@@ -113,88 +137,96 @@ const Navbar = () => {
                 d="M4 6h16M4 12h16M4 18h7"
               />
             </svg> */}
-            <MdMenu className="mt-1 w-8"></MdMenu>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            {link}
-          </ul>
-        </div>
-      </div>
-
-      {/* small device  */}
-      <div className="navbar-center sm:hidden flex">
-        <a className="font-bold  text-xl"><img src={logo} alt="" /></a>
-      </div>
-      {/* large device */}
-      <div className="navbar-center hidden sm:flex items-center justify-between gap-3 ">
-        {link}
-      </div>
-
-      {/* user profile */}
-      <div className="navbar-end ml-1 flex items-center gap-4 ">
-          <ThemeControl></ThemeControl>
-        <div className="pro md:flex flex-col md:flex-row items-center justify-center ">
-          <div>
-            {user && user?.email ? (
-              <div className=" font-medium ">
-                <img
-                  src={user?.photoURL}
-                  className="w-5 h-5 rounded-full object-cover"
-                  alt=""
-                />
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-          <div className="hidden sm:flex">
-            {user && user?.email ? (
-              <div className="md:text-base text-xs font-medium  items-center justify-center">
-                {" "}
-                {user?.displayName}
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
-
-        <div className="  border">
-          {/* login and logout toggle */}
-          {user && user?.email ? (
-            <div
-              onClick={logOutUser}
-              className="cursor-pointer bg-[#F28A1D] text-base text-[#ffffff] px-3 py-1 rounded-sm"
+              <MdMenu className="mt-1 w-8"></MdMenu>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              Logout
+              {link}
+            </ul>
+          </div>
+        </div>
+
+        {/* small device  */}
+        <div className="navbar-center sm:hidden flex">
+          <a className="font-bold  text-xl">
+            <img src={logo} alt="" className="w-6 h-6 rounded-full" />
+          </a>
+          <p className="text-xl font-bold ">
+            {" "}
+            <span className="text-2xl font-custom  text-[#FF1E1E]">P&P</span> IT
+            Zone
+          </p>
+        </div>
+        {/* large device */}
+        <div className="navbar-center hidden sm:flex items-center justify-between gap-3 ">
+          {link}
+        </div>
+
+        {/* user profile */}
+        <div className="navbar-end ml-1 flex items-center gap-4 ">
+          <ThemeControl></ThemeControl>
+          <div className="pro md:flex flex-col md:flex-row items-center justify-center ">
+            <div>
+              {user && user?.email ? (
+                <div className=" font-medium ">
+                  <img
+                    src={user?.photoURL}
+                    className="w-5 h-5 rounded-full object-cover"
+                    alt=""
+                  />
+                </div>
+              ) : (
+                ""
+              )}
             </div>
-          ) : (
-            <div className="cursor-pointer flex flex-col sm:flex-row bg-[#F28A1D] px-0 py-1 rounded-sm">
-              <NavLink
-                to="/login"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-base  px-3 py-1 bg-[#b4d4ff] font-bold"
-                    : "text-base font-bold rounded-md mx-2"
-                }
-              >
-                Login
-              </NavLink>
-              <NavLink
-                to="/register"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-base px-3 py-1 bg-[#b4d4ff] w-full font-bold hidden md:flex"
-                    : "text-base font-bold rounded-md mx-2 hidden md:flex"
-                }
-              >
-                Register
-              </NavLink>
+            <div className="hidden sm:flex">
+              {user && user?.email ? (
+                <div className="md:text-base text-xs font-medium  items-center justify-center">
+                  {" "}
+                  {user?.displayName}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
-          )}
+          </div>
+
+          <div className="  border">
+            {/* login and logout toggle */}
+            {user && user?.email ? (
+              <div
+                onClick={logOutUser}
+                className="cursor-pointer bg-[#F28A1D] text-base text-[#ffffff] px-3 py-1 rounded-sm"
+              >
+                Logout
+              </div>
+            ) : (
+              <div className="cursor-pointer flex flex-col sm:flex-row bg-[#F28A1D] px-0 py-1 rounded-sm">
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-base  px-3 py-1 bg-[#b4d4ff] font-bold"
+                      : "text-base font-bold rounded-md mx-2"
+                  }
+                >
+                  Login
+                </NavLink>
+                <NavLink
+                  to="/register"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-base px-3 py-1 bg-[#b4d4ff] w-full font-bold hidden md:flex"
+                      : "text-base font-bold rounded-md mx-2 hidden md:flex"
+                  }
+                >
+                  Register
+                </NavLink>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

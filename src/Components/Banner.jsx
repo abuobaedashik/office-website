@@ -6,7 +6,7 @@ import img5 from "../assets/image.jpg";
 
 const Banner = () => {
   return (
-    <div className="bg-[#FAF0F0] mb-24  mx-auto ">
+    <div className="bg-[#66D2CE] mb-24  mx-auto ">
       <div className="mx-auto w-11/12 flex flex-col md:flex-row justify-between py-24 items-center">
         <div className="md:w-[45%]">
           <div className="mt-5 text-5xl font-extrabold font-custom mb-6">
@@ -19,8 +19,8 @@ const Banner = () => {
             you ready to take charge?
           </div>
           <div className="mt-2 text-xl font-nunito flex items-center  gap-3">
-          <button className="btn bg-[#FF1E1E] text-[#ffffff]" >Browse Course</button>
-          <button className="btn bg-[#FF1E1E] text-[#ffffff]" >Join Free Seminar</button>
+          <button className="btn bg-[#7D1C4A] text-[#ffffff]" >Browse Course</button>
+          <button className="btn bg-[#7D1C4A] text-[#ffffff]" >Join Free Seminar</button>
           </div>
         </div>
         <div className="md:w-[45%]">

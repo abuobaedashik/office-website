@@ -7,6 +7,7 @@ import MainLayout from '../Pages/MainLayout';
 import PrivateRoute from './PrivateRoute';
 import { TbError404, TbError404Off } from "react-icons/tb";
 import { BiErrorCircle } from "react-icons/bi"
+import About from '../Components/About';
 
 
 const Router =createBrowserRouter([
@@ -24,6 +25,10 @@ const Router =createBrowserRouter([
     {
       path: "/login",
       element: <Login></Login>,
+    },
+    {
+      path: "/about",
+      element: <About></About>,
     },
     {
       path:"/register",
