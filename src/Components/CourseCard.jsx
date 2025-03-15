@@ -1,4 +1,7 @@
-import React from "react";
+import { FreeMode, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 
 const CourseCard = () => {
    const course= [
@@ -33,7 +36,7 @@ const CourseCard = () => {
         <div className="mt-12 text-4xl text-center font-bold  font-custom">Our Popular Course</div>
         <div className="flex flex-wrap justify-center mt-6 gap-4">
             {course.map((data) => (
-                  <div key={data._id} className="bg-[#ffffff] rounded-2xl shadow-lg p-4 w-full sm:w-[30%]">
+                  <div key={data._id} className="bg-[#EAEAEA] rounded-2xl shadow-lg p-4 w-full sm:w-[30%]">
                   <img
                     src={data.image}
                     alt={data.title}
