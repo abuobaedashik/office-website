@@ -6,6 +6,7 @@ import Description from "../Components/Description";
 import CardSec from "../Components/Provider/CardSec";
 import CourseCard from "../Components/CourseCard";
 import Feature from "../Components/Feature";
+import FreeSeminar from "../Components/FreeSeminar";
 // import { Typewriter } from 'react-simple-typewriter';
 
 const Home = () => {
@@ -32,6 +33,10 @@ const Home = () => {
       {/* course card data */}
       <div className="w-full mx-auto mb-12">
        <Feature></Feature>
+      </div>
+      {/* course card data */}
+      <div className="w-11/12 mx-auto mb-24 ">
+       <FreeSeminar></FreeSeminar>
       </div>
 
      
