@@ -14,7 +14,7 @@ const FreeSeminar = () => {
             <button className="px-3 py-2 rounded-md bg-[#d99904] text-[#ffffff]">Join Seminar</button>
           </div>
 
-          <div className="border-2 border-[#d99904] rounded-lg">
+          <div className="  rounded-lg">
             <img
               src={semener}
               className="max-w-sm rounded-lg shadow-2xl  h-[400px] object-cover  w-full"
