@@ -9,10 +9,13 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 
 // Image imports (You can replace the URLs with your actual image paths)
-import design from "../../src/assets/design.png";
-import web from "../../src/assets/web.png";
+import design from "../../src/assets/web/design2.png";
+import web from "../../src/assets/web/web2.png";
 import office from "../../src/assets/office.png";
-import english from "../../src/assets/icons8-english-96.png";
+import digitalmarket from "../../src/assets/web/digital.png";
+import net from "../../src/assets/web/net.png";
+import english from "../../src/assets/web/english.png";
+import diploma from "../../src/assets/web/diploma3.png";
 
 const Description = () => {
   const [swiperRef, setSwiperRef] = useState(null);
@@ -22,10 +25,12 @@ const Description = () => {
   // Slide content array containing image paths and descriptions
   const slides = [
     { imgSrc: design, description: "Graphic Design" },
-    { imgSrc: web, description: "Web Development" },
-    { imgSrc: office, description: "Office Work" },
-    { imgSrc: english, description: "Multimedia Content" },
-    { imgSrc: design, description: "Regular Image" },  // Can be replaced with a different image
+    { imgSrc: web, description: "WEB Development" },
+    { imgSrc: office, description: "Office Application" },
+    { imgSrc: digitalmarket, description: "Digital Marketing" },
+    { imgSrc: net, description: "Networking & Handwork" },
+    { imgSrc: english, description: "English Language" },
+    { imgSrc: diploma, description: "1 Year Diploma" },
   ];
 
   const prepend = () => {
@@ -42,28 +47,41 @@ const Description = () => {
 
   return (
     <div>
-      <div className="mt-6 mb-6 text-4xl text-center font-bold font-custom">
+       <div className="flex flex-col items-center justify-center">
+       <div className="mt-32 mb-2 text-4xl text-center font-extrabold font-custom">
         Find Your Career Direction
       </div>
+      <div className=" text-lg text-center mb-16"> Choose the Right Course to Build Your Dream Career</div>
+       </div>
 
       <Swiper
         modules={[Virtual, Navigation, Pagination]}
         onSwiper={setSwiperRef}
-        slidesPerView={3}
-        centeredSlides={true}
+        slidesPerView={5}
+        centeredSlides={false}
         spaceBetween={30}
         pagination={{ type: "fraction" }}
         navigation={true}
+        initialSlide={0}
+        loop={false}
         virtual
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index} virtualIndex={index}>
-            <div className="slide-content bg-[#66D2CE] p-12 items-center justify-center flex flex-col gap-2 rounded-lg">
-              <img src={slide.imgSrc} alt={slide.description} className="slide-image" />
-              <p>{slide.description}</p>
-            </div>
-          </SwiperSlide>
-        ))}
+        <div className="">
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index} virtualIndex={index}>
+              <div className="slide-content bg-[#ADB2D4] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-2 rounded-3xl">
+                <img
+                  src={slide.imgSrc}
+                  alt={slide.description}
+                  className="slide-image"
+                />
+                <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+                  {slide.description}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </div>
       </Swiper>
 
       <p className="append-buttons">

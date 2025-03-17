@@ -37,7 +37,7 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "px-1 py-1 text-lg font-semibold flex gap-1 items-center"
+            ? "px-1 py-1 text-xl font-semibold flex gap-1 items-center"
             : " flex gap-1 items-center"
         }
         to="/"
@@ -50,7 +50,7 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            ? "px-3 py-1 text-xl bg-[#b4d4ff] font-semibold flex gap-1 items-center"
             : "flex gap-1 items-center "
         }
         to="/about"
@@ -61,7 +61,7 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            ? "px-3 py-1 text-xl bg-[#b4d4ff] font-semibold flex gap-1 items-center"
             : " flex gap-1 items-center"
         }
         to="/contact"
@@ -72,7 +72,7 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "px-3 py-1 text-lg bg-[#b4d4ff] font-semibold flex gap-1 items-center"
+            ? "px-3 py-1 text-xl bg-[#b4d4ff] font-semibold flex gap-1 items-center"
             : " flex gap-1 items-center"
         }
         to="/course"
@@ -123,20 +123,6 @@ const Navbar = () => {
               role="button"
               className="btn btn-ghost btn-circle"
             >
-              {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 md:h-8 md:w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h7"
-              />
-            </svg> */}
               <MdMenu className="mt-1 w-8"></MdMenu>
             </div>
             <ul
@@ -198,12 +184,12 @@ const Navbar = () => {
             {user && user?.email ? (
               <div
                 onClick={logOutUser}
-                className="cursor-pointer bg-[#F28A1D] text-base text-[#ffffff] px-3 py-1 rounded-sm"
+                className="cursor-pointer bg-[#FF1E1E] text-base text-[#ffffff] px-3 py-1 rounded-sm"
               >
                 Logout
               </div>
             ) : (
-              <div className="cursor-pointer flex flex-col sm:flex-row bg-[#F28A1D] px-0 py-1 rounded-sm">
+              <div className="cursor-pointer flex flex-col text-[#ffffff] sm:flex-row bg-[#FF1E1E] px-0 py-1 rounded-sm">
                 <NavLink
                   to="/login"
                   className={({ isActive }) =>

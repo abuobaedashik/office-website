@@ -19,8 +19,8 @@ const Banner = () => {
             you ready to take charge?
           </div>
           <div className="mt-2 text-xl font-nunito flex items-center  gap-3">
-          <button className="btn bg-[#7D1C4A] text-[#ffffff]" >Browse Course</button>
-          <button className="btn bg-[#7D1C4A] text-[#ffffff]" >Join Free Seminar</button>
+          <button className="px-3 py-2 rounded-lg text-lg font-bold bg-[#FF1E1E] hover:bg-[#ffffff] hover:text-[#ff1e1e] text-[#ffffff]" >Browse Course</button>
+          <button className="px-3 py-2 rounded-lg text-lg font-bold bg-[#FF1E1E] hover:bg-[#ffffff] hover:text-[#ff1e1e] text-[#ffffff]" >Join Free Seminar</button>
           </div>
         </div>
         <div className="md:w-[45%]">

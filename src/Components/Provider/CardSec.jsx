@@ -19,7 +19,7 @@ const CardSec = () => {
       <div className="mt-6 flex items-center gap-5 justify-between flex-col md:flex-row p-6">
 
         <div>
-          <div className="flex items-center justify-between gap-5 p-4 px-4 bg-[#F3CFCF] hover:bg-[#66D2CE] flex-col rounded-lg">
+          <div className="flex items-center justify-between gap-5 p-4 px-4 bg-[#B3D8A8] hover:bg-[#DF6D14]  flex-col rounded-lg">
             <div>
               <img src={lifetime} alt="p" className="w-[80px] h-[80px]" />
             </div>
@@ -30,7 +30,7 @@ const CardSec = () => {
         </div>
 
         <div>
-          <div className="flex items-center justify-between gap-5 p-4 px-4 bg-[#F3CFCF] hover:bg-[#66D2CE] flex-col rounded-lg">
+          <div className="flex items-center justify-between gap-5 p-4 px-4 bg-[#B3D8A8] hover:bg-[#DF6D14] flex-col rounded-lg">
             <div>
               <img src={online} alt="p" className="w-[80px] h-[80px]" />
             </div>
@@ -40,7 +40,7 @@ const CardSec = () => {
           </div>
         </div>
         <div>
-          <div className="flex items-center justify-between gap-5 p-4 px-4 bg-[#F3CFCF] hover:bg-[#66D2CE] flex-col rounded-lg">
+          <div className="flex items-center justify-between gap-5 p-4 px-4 bg-[#B3D8A8] hover:bg-[#DF6D14] flex-col rounded-lg">
             <div>
               <img src={parmanent} alt="p" className="w-[80px] h-[80px]" />
             </div>
