@@ -9,7 +9,7 @@ import { Tooltip } from "react-tooltip";
 const Footer = () => {
   return (
     <div className="bg-[#131313] text-[#ffffffc7] pb-5">
-      <footer className="grid grid-cols-1 md:grid-cols-3 text-left gap-8 px-5 pt-10 border-b pb-12 mx-auto w-[95%] border-[#353535]">
+      <footer className="grid grid-cols-1 md:grid-cols-3 text-left gap-8 px-5  border-b pb-12 mx-auto w-[95%] border-[#353535]">
         {/* Contact Info */}
         <nav className="flex flex-col gap-4 items-start">
           <h6 className="text-lg font-bold">Contact Info</h6>

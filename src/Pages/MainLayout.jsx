@@ -10,10 +10,10 @@ const MainLayout = () => {
               <Navbar></Navbar>
             </div>
             <div className=" py-[12px] mb-10 border-3 border-blue-400"></div>
-            <div className="mx-auto min-h-screen">
+            <div className="mx-auto ">
              <Outlet></Outlet>
             </div>
-            <div className="footer mt-5">
+            <div className="footer">
                 <Footer></Footer>
             </div>
         </div>

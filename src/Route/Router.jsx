@@ -10,6 +10,9 @@ import { BiErrorCircle } from "react-icons/bi"
 import About from '../Components/About';
 import Course from '../Pages/Course';
 import EveryCourseDetails from '../Components/EveryCourseDetails';
+import Contact from '../Components/Contact';
+
+
 
 
 const Router =createBrowserRouter([
@@ -25,9 +28,18 @@ const Router =createBrowserRouter([
           path: "/about",
           element: <About></About>,
         },
+        // {
+        //   path: "/contact",
+        //   element: <Contact></Contact>,
+        // },
+
         {
           path: "/course",
           element: <Course></Course>
+        },
+        {
+          path: "/contact",
+          element: <Contact></Contact>
         },
         {
           path: "/course/courseDetails/:id",
