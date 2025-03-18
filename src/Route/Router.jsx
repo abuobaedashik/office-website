@@ -8,6 +8,8 @@ import PrivateRoute from './PrivateRoute';
 import { TbError404, TbError404Off } from "react-icons/tb";
 import { BiErrorCircle } from "react-icons/bi"
 import About from '../Components/About';
+import Course from '../Pages/Course';
+import EveryCourseDetails from '../Components/EveryCourseDetails';
 
 
 const Router =createBrowserRouter([
@@ -19,16 +21,28 @@ const Router =createBrowserRouter([
           path: "/",
           element: <Home></Home>,
         },
-    
+        {
+          path: "/about",
+          element: <About></About>,
+        },
+        {
+          path: "/course",
+          element: <Course></Course>
+        },
+        {
+          path: "/course/courseDetails/:id",
+          element: <EveryCourseDetails />,
+          loader: async ({ params }) => {
+            const res = await fetch("/course.json"); 
+            const data = await res.json();
+            return data.find((course) => course._id === params.id); 
+          },
+        },
       ]
     },
     {
       path: "/login",
       element: <Login></Login>,
-    },
-    {
-      path: "/about",
-      element: <About></About>,
     },
     {
       path:"/register",

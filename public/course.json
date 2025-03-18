@@ -1,0 +1,288 @@
+[
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a01",
+    "course_name": "Professional Graphics Design",
+    "course_fee": 5000,
+    "review": 4.8,
+    "category": "Graphics Design",
+    "banner_image": "https://i.ibb.co.com/Df34JvJf/geaphics-design.webp",
+    "duration": "3 Months",
+    "description": "Learn the fundamentals of graphic design, including typography, color theory, and composition.",
+    "course_module": [
+      "Typography",
+      "Color Theory",
+      "Composition",
+      "Layout Design",
+      "Branding"
+    ],
+    "software": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "CorelDRAW"
+    ],
+    "technology": [
+      "Graphic Design",
+      "Branding",
+      "Adobe Suite"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a02",
+    "course_name": "Image Editing",
+    "course_fee": 4000,
+    "review": 4.6,
+    "category": "Graphics Design",
+    "banner_image": "https://i.ibb.co.com/9k1G3KSq/image-edit.webp",
+    "duration": "2 Months",
+    "description": "Master image enhancement, retouching, and manipulation techniques.",
+    "course_module": [
+      "Retouching",
+      "Photo Manipulation",
+      "Color Correction"
+    ],
+    "software": [
+      "Adobe Photoshop",
+      "Lightroom"
+    ],
+    "technology": [
+      "Image Editing",
+      "Photo Manipulation",
+      "Adobe Photoshop"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a03",
+    "course_name": "Adobe Photoshop",
+    "course_fee": 4500,
+    "review": 4.7,
+    "category": "Graphics Design",
+    "banner_image": "https://i.ibb.co.com/WvwpcD92/photoshopimg.jpg",
+    "duration": "2.5 Months",
+    "description": "Comprehensive training on Adobe Photoshop for design and editing.",
+    "course_module": [
+      "Layers & Masks",
+      "Image Manipulation",
+      "Typography in Photoshop"
+    ],
+    "software": [
+      "Adobe Photoshop"
+    ],
+    "technology": [
+      "Adobe Photoshop",
+      "Photo Editing",
+      "Graphic Design"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a04",
+    "course_name": "Adobe Illustrator",
+    "course_fee": 4500,
+    "review": 4.7,
+    "category": "Graphics Design",
+    "banner_image": "https://i.ibb.co.com/WNthcgsm/illustrator.png",
+    "duration": "2.5 Months",
+    "description": "Learn vector illustration and logo design using Adobe Illustrator.",
+    "course_module": [
+      "Vector Graphics",
+      "Logo Design",
+      "Illustration Techniques"
+    ],
+    "software": [
+      "Adobe Illustrator"
+    ],
+    "technology": [
+      "Adobe Illustrator",
+      "Vector Design",
+      "Logo Design"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a05",
+    "course_name": "Web Design",
+    "course_fee": 6000,
+    "review": 4.8,
+    "category": "Web Design and Development",
+    "banner_image": "https://i.ibb.co.com/7JKfjz6R/webdesign.webp",
+    "duration": "3 Months",
+    "description": "Learn HTML, CSS, and design principles to build beautiful websites.",
+    "course_module": [
+      "HTML",
+      "CSS",
+      "Responsive Design",
+      "Tailwind CSS",
+      "UI/UX Principles"
+    ],
+    "software": [
+      "Figma",
+      "Visual Studio Code"
+    ],
+    "technology": [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "UI/UX Design"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a06",
+    "course_name": "Web Development with JavaScript",
+    "course_fee": 7000,
+    "review": 4.9,
+    "category": "Web Design and Development",
+    "banner_image": "https://i.ibb.co.com/yc1G376H/webdevelopment.jpg",
+    "duration": "4 Months",
+    "description": "JavaScript, React, and frontend development with React.js",
+    "course_module": [
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "JavaScript Basics",
+      "ES6",
+      "React.js",
+      "Node.js",
+      "MongoDB"
+    ],
+    "software": [
+      "Visual Studio Code",
+      "Postman",
+      "MongoDB Compass"
+    ],
+    "technology": [
+      "JavaScript",
+      "React.js",
+      "Node.js",
+      "MongoDB"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a07",
+    "course_name": "Digital Marketing",
+    "course_fee": 5000,
+    "review": 4.7,
+    "category": "Digital Marketing",
+    "banner_image": "https://i.ibb.co.com/1Hnn83R/digitalmarketing.jpg",
+    "duration": "3 Months",
+    "description": "Learn SEO, social media marketing, and online advertising techniques.",
+    "course_module": [
+      "SEO",
+      "Social Media Marketing",
+      "Google Ads",
+      "Content Marketing"
+    ],
+    "software": [
+      "Google Analytics",
+      "Facebook Ads Manager",
+      "SEMrush"
+    ],
+    "technology": [
+      "SEO",
+      "Social Media Marketing",
+      "Google Ads"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a08",
+    "course_name": "Microsoft Word",
+    "course_fee": 3000,
+    "review": 4.5,
+    "category": "Office Application",
+    "banner_image": "https://i.ibb.co.com/CsSQTbXz/Word-headpic.webp",
+    "duration": "1.5 Months",
+    "description": "Learn to create and format documents professionally in Microsoft Word.",
+    "course_module": [
+      "Document Formatting",
+      "Tables & Charts",
+      "Mail Merge"
+    ],
+    "software": [
+      "Microsoft Word"
+    ],
+    "technology": [
+      "Microsoft Office",
+      "Word Processing"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a09",
+    "course_name": "Excel & PowerPoint",
+    "course_fee": 3500,
+    "review": 4.6,
+    "category": "Office Application",
+    "banner_image": "https://i.ibb.co.com/8DwHBFff/powerpoint.jpg",
+    "duration": "2 Months",
+    "description": "Master data analysis in Excel and presentation skills in PowerPoint.",
+    "course_module": [
+      "Excel Formulas & Functions",
+      "Data Visualization",
+      "PowerPoint Animation"
+    ],
+    "software": [
+      "Microsoft Excel",
+      "Microsoft PowerPoint"
+    ],
+    "technology": [
+      "Microsoft Excel",
+      "Data Visualization",
+      "Presentation Design"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a10",
+    "course_name": "Video Editing",
+    "course_fee": 5500,
+    "review": 4.8,
+    "category": "Graphics Design",
+    "banner_image": "https://i.ibb.co.com/274gW62S/videoediting.jpg",
+    "duration": "3 Months",
+    "description": "Learn video editing techniques, motion graphics, and visual effects.",
+    "course_module": [
+      "Basic Editing",
+      "Transitions & Effects",
+      "Color Grading",
+      "Motion Graphics",
+      "Audio Syncing"
+    ],
+    "software": [
+      "Adobe Premiere Pro",
+      "Adobe After Effects",
+      "DaVinci Resolve"
+    ],
+    "technology": [
+      "Video Editing",
+      "Motion Graphics",
+      "Visual Effects"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a11",
+    "course_name": "1 Year Diploma in Graphic & Web Design",
+    "course_fee": 15000,
+    "review": 4.9,
+    "category": "Diploma Program",
+    "banner_image": "https://i.ibb.co.com/Kj483qfQ/Diploma.png",
+    "duration": "1 Year",
+    "description": "A comprehensive diploma covering Graphic Design, Web Design, and Multimedia.",
+    "course_module": [
+      "Graphics Design Basics",
+      "Adobe Photoshop & Illustrator",
+      "Web Design with HTML, CSS & Tailwind",
+      "JavaScript & React.js",
+      "Video Editing & Motion Graphics",
+      "UI/UX Design",
+      "Portfolio Development"
+    ],
+    "software": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Figma",
+      "Visual Studio Code",
+      "Adobe Premiere Pro"
+    ],
+    "technology": [
+      "Graphic Design",
+      "Web Development",
+      "UI/UX",
+      "Motion Graphics"
+    ]
+  }
+]

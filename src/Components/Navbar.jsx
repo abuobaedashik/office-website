@@ -189,7 +189,7 @@ const Navbar = () => {
                 Logout
               </div>
             ) : (
-              <div className="cursor-pointer flex flex-col text-[#ffffff] sm:flex-row bg-[#FF1E1E] px-0 py-1 rounded-sm">
+              <div className="cursor-pointer flex flex-col rounded-[20px] text-[#ffffff] sm:flex-row bg-[#FF1E1E] px-0 py-1 ">
                 <NavLink
                   to="/login"
                   className={({ isActive }) =>
