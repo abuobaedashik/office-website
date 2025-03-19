@@ -249,41 +249,36 @@ const Navbar = () => {
   // Menu Links
   const link = (
     <>
-      <NavLink className="flex gap-1 items-center" to="/">
+      <NavLink className="flex gap-1 font-roboto font-bold text-base items-center" to="/">
         <IoIosHome /> Home
       </NavLink>
-      <NavLink className="flex gap-1 items-center" to="/about">
+      <NavLink className="flex gap-1 font-roboto font-bold text-base items-center" to="/about">
         <MdReviews /> About Us
       </NavLink>
-      <NavLink className="flex gap-1 items-center" to="/contact">
+      <NavLink className="flex gap-1 font-roboto font-bold text-base items-center" to="/contact">
         <IoAddCircleOutline /> Contact
       </NavLink>
-      <NavLink className="flex gap-1 items-center" to="/course">
+      <NavLink className="flex gap-1 font-roboto font-bold text-base items-center" to="/course">
         <CgProfile /> Our Course
       </NavLink>
     </>
   );
 
   return (
-    <div>
-      {/* Top Red Bar */}
-      <div className="fixed top-0 left-0 w-full bg-red-600 text-white py-2 text-sm z-50">
-        <div className="container mx-auto flex justify-between px-4">
-          <div className="flex gap-3">
-            <p>+8801765262296</p>
-            <p>abuobaedashik@gmail.com</p>
-          </div>
-          <p>Date: {todayDate}</p>
-        </div>
+    <div className="fixed top-0 left-0 w-full z-50">
+      {/* লাল বার (Top Bar) */}
+      <div className="bg-[#FF1E1E] text-white py-2 px-6 flex justify-between items-center text-sm">
+        <p>+8801765262296 | abubaedashik@gmail.com</p>
+        <p>Date: {new Date().toLocaleDateString()}</p>
       </div>
 
-      {/* Navbar */}
+      {/* ন্যাভবার */}
       <div
-        className={`fixed top-[32px] left-0 w-full z-50 transition-all duration-500 ${
-          isScrolled ? "bg-white shadow-lg py-3" : "bg-[#E7FBB4] py-5"
+        className={`transition-all duration-500 ${
+          isScrolled ? "bg-white shadow-lg py-3" : "bg-[#FFC55A] py-4"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between px-6">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" />
@@ -293,13 +288,13 @@ const Navbar = () => {
             </p>
           </div>
 
-          {/* Menu Links - Large Screen */}
+          {/* Menu Links */}
           <div className="hidden sm:flex items-center gap-6">{link}</div>
 
           {/* Theme Control & User */}
           <div className="flex items-center gap-4">
             <ThemeControl />
-            {user && user?.email ? (
+            {user?.email ? (
               <div className="flex items-center gap-2">
                 <img
                   src={user?.photoURL}
@@ -308,12 +303,10 @@ const Navbar = () => {
                 />
                 <p className="text-sm font-medium">{user?.displayName}</p>
               </div>
-            ) : (
-              ""
-            )}
+            ) : null}
 
             {/* Login/Logout */}
-            {user && user?.email ? (
+            {user?.email ? (
               <button
                 onClick={logOutUser}
                 className="bg-[#FF1E1E] text-white px-4 py-1 rounded-md"
@@ -336,13 +329,6 @@ const Navbar = () => {
                 </NavLink>
               </div>
             )}
-          </div>
-
-          {/* Mobile Menu */}
-          <div className="sm:hidden">
-            <button className="btn btn-ghost btn-circle">
-              <MdMenu className="text-2xl" />
-            </button>
           </div>
         </div>
       </div>

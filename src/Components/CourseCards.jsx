@@ -18,12 +18,12 @@ const CourseCards = ({ course }) => {
   console.log(course);
   return (
     <div className="">
-      <div className="bg-white border border-blue-500 shadow-lg rounded-2xl overflow-hidden mt-2 h-full flex flex-col">
+      <div className="bg-white  shadow-lg rounded-2xl overflow-hidden mt-2 h-full flex flex-col">
         <div className="text-base">
           <img
             src={banner_image}
             alt={course_name}
-            className="w-full h-48 object-cover"
+            className="w-full h-[250px] object-cover"
           />
         </div>
 

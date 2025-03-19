@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       
       {/* why  choice us section*/}
-      <div className="w-11/12 mx-auto mb-12">
+      <div className="w-full bg-[#F0F0F0] mx-auto mb-12">
        <Description></Description>
       </div>
 
@@ -27,15 +27,15 @@ const Home = () => {
       </div>
 
       {/* course card data */}
-      <div className="w-11/12 mx-auto mb-12">
+      <div className="w-full mx-auto mb-0 bg-[#f0f0f0] py-12">
        <CourseCard></CourseCard>
       </div>
       {/* course card data */}
-      <div className="w-full mx-auto mb-12">
+      <div className="w-full mx-auto">
        <Feature></Feature>
       </div>
       {/* course card data */}
-      <div className="w-11/12 mx-auto mb-24 ">
+      <div className="w-full mx-auto mb-0 bg-[#ffffff] py-12">
        <FreeSeminar></FreeSeminar>
       </div>
 

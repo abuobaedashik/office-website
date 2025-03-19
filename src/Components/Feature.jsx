@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/web3.jpg";
+import { NavLink } from "react-router-dom";
 
 const Feature = () => {
   const today = new Date();
@@ -35,19 +36,18 @@ const Feature = () => {
               {" "}
               {month} {day}, {year}
             </div>
-            <div className="mt-4 text-xl font-semibold uppercase">
-              Where can i get some
+            <div className="mt-4 text-[#D99904] text-xl font-semibold uppercase">
+              3D Cluster – Learn, Grow, Succeed!
             </div>
-            <div className="mt-4 text-base ">
-              Indulge in the finest culinary experiences at Bistro Boss, where
-              passion meets perfection. Whether you’re here for a hearty
-              breakfast, a delightful lunch, or an unforgettable dinner, we’re
-              committed to serving dishes that tantalize your taste buds.At
-              Bistro Boss, we believe food is an art.
+            <div className="mt-4 text-base mb-6">
+              We provide expert-led training in [key subjects] to help you
+              develop in-demand skills. Our hands-on approach ensures practical
+              learning, career growth, and real-world experience. Join us today
+              and build a better future!
             </div>
-            <button className="px-4 py-2 hover:bg-[#1F2937] text-xl font-bold uppercase text-[#ffffff] rounded-lg border-b-2 mt-6 border-[#ffffff]">
+            <NavLink to={'/about'} className="px-4  py-2 hover:bg-[#1F2937] text-xl font-bold uppercase text-[#ffffff] rounded-lg border-b-2 mt-12 border-[#ffffff]">
               Read More
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>

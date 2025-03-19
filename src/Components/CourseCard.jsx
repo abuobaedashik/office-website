@@ -17,7 +17,7 @@ const CourseCard = () => {
 
   return (
     <div>
-        <div className="mt-12  text-4xl text-center font-bold  font-custom">Our Popular Course</div>
+        <div className="mt-12 w-11/12 mx-auto   text-4xl text-center font-bold  font-custom">Our Popular Course</div>
         <div className="mt-6 max-w-[1920px] mx-auto min-h-screen">
       <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 w-11/12 mx-auto">
         {courses.map((course) => (

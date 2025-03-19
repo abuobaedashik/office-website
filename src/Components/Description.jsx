@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
+import Marquee from "react-fast-marquee";
 
 // Image imports (You can replace the URLs with your actual image paths)
 import design from "../../src/assets/web/design2.png";
@@ -46,61 +47,90 @@ const Description = () => {
   };
 
   return (
-    <div>
-       <div className="flex flex-col items-center justify-center">
-       <div className="mt-32 mb-2 text-4xl text-center font-extrabold font-custom">
-        Find Your Career Direction
-      </div>
-      <div className=" text-lg text-center mb-16"> Choose the Right Course to Build Your Dream Career</div>
-       </div>
-
-      <Swiper
-        modules={[Virtual, Navigation, Pagination]}
-        onSwiper={setSwiperRef}
-        slidesPerView={5}
-        centeredSlides={false}
-        spaceBetween={30}
-        pagination={{ type: "fraction" }}
-        navigation={true}
-        initialSlide={0}
-        loop={false}
-        virtual
-      >
-        <div className="">
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} virtualIndex={index}>
-              <div className="slide-content bg-[#ADB2D4] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-2 rounded-3xl">
-                <img
-                  src={slide.imgSrc}
-                  alt={slide.description}
-                  className="slide-image"
-                />
-                <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
-                  {slide.description}
-                </p>
-              </div>
-            </SwiperSlide>
-          ))}
+    <div className="w-11/12 mx-auto pb-32">
+      <div className="flex flex-col items-center justify-center py-4 ">
+        <div className="mt-12 mb-2 text-4xl text-center font-extrabold font-custom">
+          Find Your Career Direction
         </div>
-      </Swiper>
+        <div className=" text-lg text-center mb-16">
+          {" "}
+          Choose the Right Course to Build Your Dream Career
+        </div>
+      </div>
+      <Marquee gradient={false} speed={40} pauseOnHover>
+        {/* design */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={design} alt={design} className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+              Graphic Design
+            </p>
+          </div>
+        </div>
 
-      <p className="append-buttons">
-        <button onClick={prepend} className="prepend-2-slides">
-          {/* Prepend 2 Slides */}
-        </button>
-        <button onClick={() => slideTo(1)} className="prepend-slide">
-          {/* Slide 1 */}
-        </button>
-        <button onClick={() => slideTo(250)} className="slide-250">
-          {/* Slide 250 */}
-        </button>
-        <button onClick={() => slideTo(500)} className="slide-500">
-          {/* Slide 500 */}
-        </button>
-        <button onClick={append} className="append-slides">
-          {/* not */}
-        </button>
-      </p>
+        {/* { imgSrc: design, description: "Graphic Design" },
+    { imgSrc: web, description: "WEB Development" },
+    { imgSrc: office, description: "Office Application" },
+    { imgSrc: digitalmarket, description: "Digital Marketing" },
+    { imgSrc: net, description: "Networking & Handwork" },
+    { imgSrc: english, description: "English Language" },
+    { imgSrc: diploma, description: "1 Year Diploma" }, */}
+
+        {/* web  */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={web} alt="web design" className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+              Web Development
+            </p>
+          </div>
+        </div>
+        {/* marketing */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={digitalmarket} alt='web' className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+             Digital Marketing
+            </p>
+          </div>
+        </div>
+        {/* networking */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={net} alt='net' className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+            Networking & Handwork
+            </p>
+          </div>
+        </div>
+        {/* office */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={office} alt='office' className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+              Office Applications
+            </p>
+          </div>
+        </div>
+        {/* eng */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={english} alt='eng' className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+            English Language
+            </p>
+          </div>
+        </div>
+        {/* diploma */}
+        <div className="slide-content  mx-6   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+          <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+            <img src={diploma} alt='diploma' className="slide-image" />
+            <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
+            1 Year Diploma
+            </p>
+          </div>
+        </div>
+      </Marquee>
     </div>
   );
 };
