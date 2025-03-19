@@ -6,7 +6,7 @@ import img5 from "../assets/image.jpg";
 
 const Banner = () => {
   return (
-    <div className="bg-[#66D2CE] mb-24  mx-auto ">
+    <div className="bg-[#E7FBB4] mb-24  mx-auto ">
       <div className="mx-auto w-11/12 flex flex-col md:flex-row justify-between py-24 items-center">
         <div className="md:w-[45%]">
           <div className="mt-5 text-5xl font-extrabold font-custom mb-6">

@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaChalkboardTeacher, FaLaptopCo
 
 const About = () => {
   return (
-    <div className="max-w-4xl mt-32 mx-auto my-10 p-6 bg-white shadow-lg rounded-2xl border">
+    <div className="w-11/12 mt-32 mx-auto my-10 p-6 bg-white shadow-lg rounded-2xl border">
       <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">About 3D Cluster</h2>
       <p className="text-gray-700 text-center mb-6">
         3D Cluster is a leading IT training institute in Mirpur, Dhaka, dedicated to providing high-quality education in the field of technology. 
