@@ -284,5 +284,57 @@
       "UI/UX",
       "Motion Graphics"
     ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1002",
+    "course_name": "Networking Basics",
+    "course_fee": 6000,
+    "review": 4.7,
+    "category": "Networking & Hardware",
+    "banner_image": "https://i.ibb.co.com/networking.jpg",
+    "duration": "3 Months",
+    "description": "Learn the fundamentals of computer networking, including IP addressing, subnetting, and network security.",
+    "course_module": [
+      "Network Fundamentals",
+      "IP Addressing",
+      "Subnetting",
+      "Routing & Switching",
+      "Network Security"
+    ],
+    "software": [
+      "Cisco Packet Tracer",
+      "Wireshark"
+    ],
+    "technology": [
+      "Networking",
+      "CCNA",
+      "Network Security"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1003",
+    "course_name": "Spoken English",
+    "course_fee": 4000,
+    "review": 4.6,
+    "category": "English",
+    "banner_image": "https://i.ibb.co.com/spoken-english.jpg",
+    "duration": "2 Months",
+    "description": "Improve your spoken English skills with interactive practice and real-life conversations.",
+    "course_module": [
+      "Basic Grammar",
+      "Pronunciation",
+      "Conversational Skills",
+      "Public Speaking",
+      "Business Communication"
+    ],
+    "software": [
+      "Zoom",
+      "Google Meet"
+    ],
+    "technology": [
+      "Language Learning",
+      "Communication Skills",
+      "English Fluency"
+    ]
   }
 ]

@@ -11,6 +11,8 @@ import About from '../Components/About';
 import Course from '../Pages/Course';
 import EveryCourseDetails from '../Components/EveryCourseDetails';
 import Contact from '../Components/Contact';
+import Category from '../Pages/CourseCategories/Category';
+import Description from '../Components/Description';
 
 
 
@@ -48,6 +50,15 @@ const Router =createBrowserRouter([
             const res = await fetch("/course.json"); 
             const data = await res.json();
             return data.find((course) => course._id === params.id); 
+          },
+        },
+        {
+          path: "/category/:Category",
+          element: <Category />,
+          loader: async ({ params }) => {
+            const res = await fetch("/course.json"); 
+            const data = await res.json();
+            return data.filter((course) => course.category === params.Category); 
           },
         },
       ]

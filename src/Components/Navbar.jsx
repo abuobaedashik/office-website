@@ -265,17 +265,14 @@ const Navbar = () => {
   );
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50">
-      {/* লাল বার (Top Bar) */}
-      <div className="bg-[#FF1E1E] text-white py-2 px-6 flex justify-between items-center text-sm">
+    <div className="fixed left-1/2 -translate-x-1/2 mx-auto max-w-[1920px] top-0  w-full z-50">
+      <div className="bg-[#FF1E1E] text-white py-2  max-w-[1920px] w-full px-6 flex justify-between items-center text-sm">
         <p>+8801765262296 | abubaedashik@gmail.com</p>
         <p>Date: {new Date().toLocaleDateString()}</p>
       </div>
-
-      {/* ন্যাভবার */}
       <div
-        className={`transition-all duration-500 ${
-          isScrolled ? "bg-white shadow-lg py-3" : "bg-[#FFC55A] py-4"
+        className={`transition-all duration-500 max-w-[1920px] top-0 left-0 w-full z-50  ${
+          isScrolled ? "bg-white shadow-lg py-3" : "bg-[#87f2c7] py-4"
         }`}
       >
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6">
@@ -309,7 +306,7 @@ const Navbar = () => {
             {user?.email ? (
               <button
                 onClick={logOutUser}
-                className="bg-[#FF1E1E] text-white px-4 py-1 rounded-md"
+                className="px-4 py-1 rounded-2xl  text-lg font-base hover:bg-[#1F2937]  bg-[#ff1e1e] text-[#ffffff]"
               >
                 Logout
               </button>
@@ -317,13 +314,13 @@ const Navbar = () => {
               <div className="flex gap-2">
                 <NavLink
                   to="/login"
-                  className="bg-[#FF1E1E] text-white px-3 py-1 rounded-md"
+                  className="px-4 py-1 rounded-2xl text-lg font-base hover:bg-[#1F2937]  bg-[#ff1e1e] text-[#ffffff]"
                 >
                   Login
                 </NavLink>
                 <NavLink
                   to="/register"
-                  className="hidden md:block bg-[#FF1E1E] text-white px-3 py-1 rounded-md"
+                  className="hidden md:block px-4 py-1 rounded-2xl text-lg font-base hover:bg-[#1F2937]  bg-[#ff1e1e] text-[#ffffff]"
                 >
                   Register
                 </NavLink>

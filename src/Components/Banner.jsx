@@ -17,32 +17,32 @@ const Banner = () => {
     loop: 0,
   });
   return (
-    <div className="bg-[#FFC55A] mb-0  mx-auto ">
-      <div className="mx-auto w-11/12 flex flex-col md:flex-row justify-between py-24 items-center">
+    <div className="mb-0 w-11/12 mx-auto ">
+      <div className="   mt-8  flex flex-col md:flex-row justify-between  py-24 items-center">
         <div className="md:w-[45%]">
-          <div className="mt-5 text-5xl text-[#024CAA] font-extrabold font-custom  h-[154px] ">
+          <div className=" text-5xl text-[#00ff] font-extrabold font-custom  h-[154px] ">
             <span>{text}</span>
           </div>
-          <div className="mt-0 text-xl font-nunito">
+          <div className="mt-5 text-xl font-roboto text-[#1F2937] font-bold">
             Step into the future with confidence! Master the latest
             technologies, enhance your expertise, and become a leader in the
             ever-evolving digital landscape. The world of innovation awaits—are
             you ready to take charge?
           </div>
-          <div className="mt-2 text-xl font-nunito flex items-center  gap-3">
-            <button className="px-3 py-2 rounded-lg text-lg font-bold bg-[#1F2937] hover:bg-[#ff1e1e] text-[#ffffff]">
+          <div className="mt-12 text-xl font-nunito flex items-center  gap-3">
+            <button className="px-3 py-2 rounded-2xl text-lg font-bold bg-[#ff1e1e] hover:bg-[#1F2937] text-[#ffffff]">
               Browse Course
             </button>
-            <button className="px-3 py-2 rounded-lg text-lg font-bold bg-[#1F2937]  hover:bg-[#ff1e1e] text-[#ffffff]">
+            <button className="px-3 py-2 rounded-2xl text-lg font-bold hover:bg-[#1F2937]  bg-[#ff1e1e] text-[#ffffff]">
               Join Free Seminar
             </button>
           </div>
         </div>
-        <div className="md:w-[45%]">
+        <div className="md:w-[45%] ">
           <img
             src={img5}
             alt="img"
-            className="sm:min-w-[600px]  h-[380px] object-cover rounded-tl-[56px] rounded-tr-[30px] rounded-b-[30px]"
+            className="w-full  h-[380px] object-cover rounded-tl-[56px] rounded-tr-[30px] rounded-b-[30px]"
           />
         </div>
       </div>

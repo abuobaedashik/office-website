@@ -12,7 +12,7 @@ import FreeSeminar from "../Components/FreeSeminar";
 const Home = () => {
   return (
     <div className="mt-0 ">
-      <div className="">
+      <div className="w-full mx-auto bg-[#87f2c7]">
        <Banner></Banner>
       </div>
       
