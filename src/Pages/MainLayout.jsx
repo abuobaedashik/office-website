@@ -9,7 +9,7 @@ const MainLayout = () => {
             <div className="mx-auto">
               <Navbar></Navbar>
             </div>
-            <div className=" py-[12px] bg-[#66D2CE] pb-10 border-3 border-blue-400"></div>
+            <div className=" py-[12px] bg-[#66D2CE] md:pb-10 pb-5 border-3 border-blue-400"></div>
             <div className="mx-auto ">
              <Outlet></Outlet>
             </div>

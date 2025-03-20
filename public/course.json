@@ -5,7 +5,7 @@
     "course_fee": 5000,
     "review": 4.8,
     "category": "Graphics Design",
-    "banner_image": "https://i.ibb.co.com/Df34JvJf/geaphics-design.webp",
+    "banner_image": "https://i.ibb.co.com/fT1Hy90/design2.jpg",
     "duration": "3 Months",
     "description": "Learn the fundamentals of graphic design, including typography, color theory, and composition.",
     "course_module": [
@@ -291,7 +291,7 @@
     "course_fee": 6000,
     "review": 4.7,
     "category": "Networking & Hardware",
-    "banner_image": "https://i.ibb.co.com/networking.jpg",
+    "banner_image": "https://i.ibb.co.com/sJvfqN08/networking-banner.jpg",
     "duration": "3 Months",
     "description": "Learn the fundamentals of computer networking, including IP addressing, subnetting, and network security.",
     "course_module": [
@@ -316,8 +316,8 @@
     "course_name": "Spoken English",
     "course_fee": 4000,
     "review": 4.6,
-    "category": "English",
-    "banner_image": "https://i.ibb.co.com/spoken-english.jpg",
+    "category": "English Language",
+    "banner_image": "https://i.ibb.co.com/xKf3BJFS/engllish.png",
     "duration": "2 Months",
     "description": "Improve your spoken English skills with interactive practice and real-life conversations.",
     "course_module": [

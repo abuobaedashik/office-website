@@ -25,7 +25,7 @@ const Feature = () => {
             </h1>
           </div>
         </div>
-        <div className="mt-4 flex items-center z-30 justify-between mx-auto w-11/12 relative py-8 px-2 md:flex-row">
+        <div className="mt-4 flex items-center z-30 justify-between flex-col mx-auto w-11/12 relative py-8 px-2 md:flex-row">
           <img
             src={img}
             className="md:w-[45%] h-[350px] w-full "

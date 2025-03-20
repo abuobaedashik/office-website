@@ -12,12 +12,12 @@ import FreeSeminar from "../Components/FreeSeminar";
 const Home = () => {
   return (
     <div className="mt-0 ">
-      <div className="w-full mx-auto bg-[#87f2c7]">
+      <div className="w-full mx-auto bg-[#87f2c7] ">
        <Banner></Banner>
       </div>
       
       {/* why  choice us section*/}
-      <div className="w-full bg-[#F0F0F0] mx-auto mb-12">
+      <div className="w-full bg-[#F0F0F0] mx-auto pb-12">
        <Description></Description>
       </div>
 

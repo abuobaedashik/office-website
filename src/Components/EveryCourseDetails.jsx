@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FaRegHandPointRight } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaHome,
+  FaLaptopCode,
+  FaRegHandPointRight,
+  FaUserGraduate,
+} from "react-icons/fa";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const EveryCourseDetails = () => {
@@ -19,22 +25,41 @@ const EveryCourseDetails = () => {
   } = course;
   console.log(course);
 
+  const audience = [
+    {
+      icon: <FaLaptopCode className="text-blue-500 text-4xl" />,
+      title: "Anyone interested to learn freelancing",
+    },
+    {
+      icon: <FaBriefcase className="text-green-500 text-4xl" />,
+      title: "Job seekers",
+    },
+    {
+      icon: <FaUserGraduate className="text-yellow-500 text-4xl" />,
+      title: "Students",
+    },
+    {
+      icon: <FaHome className="text-pink-500 text-4xl" />,
+      title: "Homemakers",
+    },
+  ];
+
   return (
     <div className=" pt-32 bg-[#F2F2F2] ">
       {/* <img src={course?.banner_image} alt="" /> */}
-      <div className=" flex px-6 justify-between gap-3 flex-row-reverse w-11/12 mx-auto  shadow-sm object-cover transform transition-transform duration-100">
+      <div className=" flex px-6 justify-between gap-3 flex-col md:flex-row-reverse w-11/12 mx-auto  shadow-sm object-cover transform transition-transform duration-100">
         <div className="p-4 md:w-[46%] w-full rounded-[60px]">
           <img
             src={banner_image}
             alt={course_name}
-            className="h-[500px] w-full mb-2 rounded-[60px] "
+            className="md:h-[500px] h-[200px] w-full  mb-2 rounded-2xl md:rounded-[60px] "
           />
         </div>
         <div className="md:w-[50%] p-4 w-full ">
-          <h2 className="text-[#131313] font-custom pb-3 text-5xl font-bold  ">
+          <h2 className="text-[#131313] font-custom pb-3 text-2xl text-center md:text-5xl font-bold  ">
             {course_name}
           </h2>
-          <h2 className="text-[#131313] pb-3 flex items-center mt-5  gap-5 text-xl font-bold ">
+          <h2 className="text-[#131313] pb-3 flex items-center mt-5 md:flex-row flex-col  gap-5 text-xl font-bold ">
             <div className="flex justify-between rounded-[25px] p-8 bg-[#FFFFFF] flex-col items-center gap-2">
               <p className="text-base font-normal">Duration</p>
               <p className="text-xl  font-bold">{duration}</p>
@@ -76,15 +101,63 @@ const EveryCourseDetails = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6 px-6 w-11/12 pb-8 mx-auto border-t-1 border-[#000000] ">
+      <div className="mt-6 px-6 w-11/12 flex-col md:flex-row pb-8 mx-auto border-t-1 flex  justify-between gap-4">
+        <div className="mt-0 w-full">
+            {/* module */}
         <div className="mx-6">
           <h2 className="text-[#131313] font-custom pb-3 text-5xl font-bold  ">
-            Course Module 
+            Course Module
           </h2>
-          <h2 className="mt-3">{course_module.map(module=><div className="flex items-center  gap-4 text-xl font-roboto font-bold" key={_id}>
-            <FaRegHandPointRight />
-            {module}
-          </div>)}</h2>
+          <h2 className="mt-3">
+            {course_module.map((module) => (
+              <div
+                className="flex items-center  gap-4 text-xl font-roboto font-bold"
+                key={_id}
+              >
+                <FaRegHandPointRight />
+                {module}
+              </div>
+            ))}
+          </h2>
+        </div>
+        {/* software */}
+        <div className="mx-6 mt-12">
+          <h2 className="text-[#131313] font-custom pb-3 text-5xl font-bold  ">
+            Software
+          </h2>
+          <h2 className="mt-3">
+            {software.map((module) => (
+              <div
+                className="flex items-center  gap-4 text-xl font-roboto font-bold"
+                key={_id}
+              >
+                <FaRegHandPointRight />
+                {module}
+              </div>
+            ))}
+          </h2>
+        </div>
+        </div>
+
+        {/* audience */}
+
+        <div className="w-full  rounded-lg mx-auto">
+          <h2 className="text-5xl font-custom font-bold text-center mb-6 text-gray-800">
+            This Course is Designed for
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {audience.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
+              >
+                {item.icon}
+                <p className="mt-4 text-gray-700 text-center font-medium">
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

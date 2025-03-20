@@ -19,11 +19,11 @@ const Banner = () => {
   return (
     <div className="mb-0 w-11/12 mx-auto ">
       <div className="   mt-8  flex flex-col md:flex-row justify-between  py-24 items-center">
-        <div className="md:w-[45%]">
-          <div className=" text-5xl text-[#00ff] font-extrabold font-custom  h-[154px] ">
+        <div className="md:w-[45%] md:mb-0 mb-5">
+          <div className="sm:text-3xl text-2xl md:text-5xl text-[#00ff] font-extrabold font-custom  h-[154px] ">
             <span>{text}</span>
           </div>
-          <div className="mt-5 text-xl font-roboto text-[#1F2937] font-bold">
+          <div className="mt-5 text-xl font-roboto text-justify text-[#1F2937] font-bold">
             Step into the future with confidence! Master the latest
             technologies, enhance your expertise, and become a leader in the
             ever-evolving digital landscape. The world of innovation awaits—are

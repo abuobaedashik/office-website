@@ -19,25 +19,31 @@ import english from "../../src/assets/web/english.png";
 import diploma from "../../src/assets/web/diploma3.png";
 import Category from "../Pages/CourseCategories/Category";
 import { NavLink } from "react-router-dom";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Description = () => {
-
-
   // Slide content array containing image paths and descriptions
   const category = [
     { imgSrc: design, description: "Graphics Design" },
     { imgSrc: web, description: "Web Design and Development" },
     { imgSrc: office, description: "Office Application" },
     { imgSrc: digitalmarket, description: "Digital Marketing" },
-    { imgSrc: net, description: "Networking & Handwork" },
+    { imgSrc: net, description: "Networking & Hardware" },
     { imgSrc: english, description: "English Language" },
     { imgSrc: diploma, description: "Diploma Program" },
   ];
 
+  const responsive = {
+    superLargeDesktop: { breakpoint: { max: 4000, min: 1024 }, items: 4 },
+    desktop: { breakpoint: { max: 1024, min: 768 }, items: 3 },
+    tablet: { breakpoint: { max: 768, min: 464 }, items: 2 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+  };
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center">
+    <div className="w-11/12 mx-auto pb-8">
+      <div className="flex flex-col  mx-auto  items-center justify-center">
         <div className="mt-12 mb-2 text-4xl text-center font-extrabold font-custom">
           Find Your Career Direction
         </div>
@@ -47,12 +53,11 @@ const Description = () => {
         </div>
       </div>
 
-     
-      <Marquee gradient={false} speed={40} pauseOnHover>
+      {/* <Marquee gradient={false} speed={40} pauseOnHover>
        
         {category.map((slide, index) => (
             <NavLink to={`/category/${slide.description}`} key={index} className="slide-content  mx-6    p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
-              <div className="slide-content bg-[#ADB2D4] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
+              <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
                 <img
                   src={slide.imgSrc}
                   alt={slide.description}
@@ -64,7 +69,34 @@ const Description = () => {
               </div>
             </NavLink>
           ))}
-      </Marquee>
+      </Marquee> */}
+
+      <Carousel
+        responsive={responsive}
+        autoPlay={true}
+        autoPlaySpeed={3000}
+        infinite={true}
+        showDots={false}
+        arrows={true}
+        
+      >
+        {category.map((slide, index) => (
+          <NavLink
+            to={`/category/${slide.description}`}
+            key={index}
+            className="mx-2 p-6 w-[300px] h-[200px] flex flex-col items-center justify-center gap-5 rounded-3xl  shadow-md bg-gradient-to-r from-[#7fceae] to-[#7a7ad8] bg-white"
+          >
+            <img
+              src={slide.imgSrc}
+              alt={slide.description}
+              className="w-24 h-24"
+            />
+            <p className="text-lg font-extrabold   text-[#1F2937]  text-center">
+              {slide.description}
+            </p>
+          </NavLink>
+        ))}
+      </Carousel>
     </div>
   );
 };
