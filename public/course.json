@@ -13,7 +13,12 @@
       "Color Theory",
       "Composition",
       "Layout Design",
-      "Branding"
+      "Branding",
+      "Invoice Template Design",
+      "Brochure Layout",
+      "Desk & well center Design ",
+      "Image Clipping",
+      "Banner / Poster Design"
     ],
     "software": [
       "Adobe Photoshop",
@@ -38,7 +43,17 @@
     "course_module": [
       "Retouching",
       "Photo Manipulation",
-      "Color Correction"
+      "Color Correction",
+      "Background Removal",
+      "Image Restoration",
+      "Portrait Retouching",
+      "HDR Editing",
+      "Object Removal",
+      "Skin Smoothing",
+      "Exposure & Contrast Adjustment",
+      "Noise Reduction",
+      "Sharpening & Clarity Enhancement",
+      "Vector Conversion"
     ],
     "software": [
       "Adobe Photoshop",
@@ -62,7 +77,11 @@
     "course_module": [
       "Layers & Masks",
       "Image Manipulation",
-      "Typography in Photoshop"
+      "Typography in Photoshop",
+      "Advanced Photo Editing Techniques",
+      "Photo Manipulation & Special Effects",
+      "Retouching for Photography",
+      "UI/UX Design with Photoshop"
     ],
     "software": [
       "Adobe Photoshop"
@@ -85,7 +104,16 @@
     "course_module": [
       "Vector Graphics",
       "Logo Design",
-      "Illustration Techniques"
+      "Illustration Techniques",
+      "Working with Paths & Shapes",
+      "Color Theory in Illustrator",
+      "Typography & Text Effects",
+      "Creating Digital Artwork",
+      "Brushes & Patterns",
+      "Illustrator for Web Design",
+      "Image Tracing & Live Paint",
+      "Advanced Vector Design Techniques",
+      "Exporting & Preparing Files for Print"
     ],
     "software": [
       "Adobe Illustrator"
@@ -140,6 +168,7 @@
       "ES6",
       "React.js",
       "Node.js",
+      "Express.Js",
       "MongoDB"
     ],
     "software": [
@@ -167,7 +196,13 @@
       "SEO",
       "Social Media Marketing",
       "Google Ads",
-      "Content Marketing"
+      "Content Marketing",
+      "Email Marketing",
+      "Affiliate Marketing",
+      "Google Analytics",
+      "Digital Marketing Strategy",
+      "Online Branding",
+      "PPC Campaign Management"
     ],
     "software": [
       "Google Analytics",
@@ -181,30 +216,8 @@
     ]
   },
   {
-    "_id": "66012a1a1a1a1a1a1a1a1a08",
-    "course_name": "Microsoft Word",
-    "course_fee": 3000,
-    "review": 4.5,
-    "category": "Office Application",
-    "banner_image": "https://i.ibb.co.com/CsSQTbXz/Word-headpic.webp",
-    "duration": "1.5 Months",
-    "description": "Learn to create and format documents professionally in Microsoft Word.",
-    "course_module": [
-      "Document Formatting",
-      "Tables & Charts",
-      "Mail Merge"
-    ],
-    "software": [
-      "Microsoft Word"
-    ],
-    "technology": [
-      "Microsoft Office",
-      "Word Processing"
-    ]
-  },
-  {
     "_id": "66012a1a1a1a1a1a1a1a1a09",
-    "course_name": "Excel & PowerPoint",
+    "course_name": "Word, Excel & PowerPoint",
     "course_fee": 3500,
     "review": 4.6,
     "category": "Office Application",
@@ -214,7 +227,14 @@
     "course_module": [
       "Excel Formulas & Functions",
       "Data Visualization",
-      "PowerPoint Animation"
+      "PowerPoint Animation",
+      "Microsoft Word Formatting Techniques",
+      "Advanced Excel Data Analysis",
+      "Excel Pivot Tables & Charts",
+      "PowerPoint Slide Design",
+      "Document Collaboration in Word",
+      "Excel Macros & Automation",
+      "PowerPoint Transitions & Effects"
     ],
     "software": [
       "Microsoft Excel",
@@ -325,7 +345,15 @@
       "Pronunciation",
       "Conversational Skills",
       "Public Speaking",
-      "Business Communication"
+      "Business Communication",
+      "Vocabulary Building",
+      "Listening Comprehension",
+      "Fluency Practice",
+      "Accent Reduction",
+      "Effective Writing Skills",
+      "Idioms & Phrasal Verbs",
+      "Interview Preparation",
+      "Debate & Discussion Skills"
     ],
     "software": [
       "Zoom",

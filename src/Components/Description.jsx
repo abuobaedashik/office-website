@@ -52,25 +52,6 @@ const Description = () => {
           Choose the Right Course to Build Your Dream Career
         </div>
       </div>
-
-      {/* <Marquee gradient={false} speed={40} pauseOnHover>
-       
-        {category.map((slide, index) => (
-            <NavLink to={`/category/${slide.description}`} key={index} className="slide-content  mx-6    p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
-              <div className="slide-content bg-[#ffffff] mx-auto   p-12 w-[200px] h-[200px] items-center justify-center flex flex-col gap-5 rounded-3xl">
-                <img
-                  src={slide.imgSrc}
-                  alt={slide.description}
-                  className="slide-image"
-                />
-                <p className="text-lg leading-5 font-bold text-[#A31D1D] ">
-                  {slide.description}
-                </p>
-              </div>
-            </NavLink>
-          ))}
-      </Marquee> */}
-
       <Carousel
         responsive={responsive}
         autoPlay={true}

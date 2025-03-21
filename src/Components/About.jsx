@@ -7,6 +7,7 @@ import {
   FaLaptopCode,
   FaUsers,
 } from "react-icons/fa";
+import Description from "./Description";
 
 const About = () => {
   return (
@@ -50,6 +51,10 @@ const About = () => {
           </p>
         </div>
       </div>
+
+
+      {/* all course */}
+      <Description></Description>
 
       {/* Contact Section */}
       <div className="mt-8 p-6 bg-gray-100 rounded-lg">
