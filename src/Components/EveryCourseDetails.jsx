@@ -22,9 +22,16 @@ const EveryCourseDetails = () => {
     software,
     technology,
     discount,
+    fee,
     _id,
   } = course;
-  console.log(course);
+
+  const discountAmount  = Math.round((fee * 30) / 100);
+  const finalPrice =  Math.round(fee - discountAmount);
+   console.log(discountAmount,"30%")
+   console.log("total final ", finalPrice)
+   const discountPercentage = Math.round(((fee - finalPrice) / fee) * 100);
+
 
   const audience = [
     {
@@ -67,7 +74,7 @@ const EveryCourseDetails = () => {
             </div>
             <div className="flex justify-between rounded-[25px] p-8 bg-[#FFFFFF] flex-col items-center gap-2">
               <p className="text-base font-normal">Fee</p>
-              <p className="text-xl  font-bold">{course_fee}BDT</p>
+              <p className="text-xl  font-bold">{finalPrice}BDT</p>
             </div>
             <div className="flex justify-between rounded-[25px] px-12 p-8 bg-[#FFFFFF] flex-col items-center gap-2">
               <p className="text-base font-normal">Class</p>
@@ -163,8 +170,8 @@ const EveryCourseDetails = () => {
           </div>
           <div className="mt-10 px-6 py-4 bg-[#ffffff] rounded-2xl text-[#F83839] text-2xl font-bold font-roboto">
             🌙 Special Eid Offer! Enroll now and enjoy{" "}
-            <span className="text-bold">{discount}</span> discount – Get the
-            course for just {course_fee} BDT!
+            <span className="text-bold">{discountPercentage}</span> discount – Get the
+            course for just {finalPrice} BDT!
           </div>
         </div>
       </div>

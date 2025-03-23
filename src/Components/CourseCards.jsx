@@ -78,12 +78,16 @@ const CourseCards = ({ course }) => {
   } = course;
 
   // Calculate Discount Percentage
-  const discountPercentage = Math.round(((fee - course_fee) / fee) * 100);
+  const discountAmount  = Math.round((fee * 30) / 100);
+  const finalPrice =  Math.round(fee - discountAmount);
+   console.log(discountAmount,"30%")
+   console.log("total final ", finalPrice)
+   const discountPercentage = Math.round(((fee - finalPrice) / fee) * 100);
 
   return (
     <div className="relative">
       {/* Course Card Container */}
-      <div className="bg-white shadow-lg rounded-2xl overflow-hidden mt-2 h-full flex flex-col border border-gray-200 transition-transform transform hover:scale-105 duration-300">
+      <div className="bg-white shadow-lg rounded-2xl overflow-hidden mt-2 h-full flex flex-col border border-gray-200 transition-transform transform hover:scale-[1.030] duration-300">
         
         {/* Discount Badge */}
         {discountPercentage > 0 && (
@@ -97,7 +101,7 @@ const CourseCards = ({ course }) => {
           <img
             src={banner_image}
             alt={`${course_name} course banner`}
-            className="w-full h-[250px] object-cover"
+            className="w-full h-[250px] hover:scale-[1.060] overflow-hidden duration-300  object-cover"
           />
         </div>
 
@@ -116,14 +120,14 @@ const CourseCards = ({ course }) => {
           {/* Pricing & CTA Button */}
           <div className="flex justify-between items-center mt-4">
             <NavLink to={`/course/courseDetails/${_id}`}>
-              <button className="py-2 px-6 font-bold rounded-lg bg-indigo-700 text-white shadow-md transition-all duration-300 hover:bg-indigo-800">
+              <button className="py-2 px-6 font-bold rounded-lg bg-[#0a033cec] text-white shadow-md transition-all duration-300 hover:bg-indigo-800">
                 View Details
               </button>
             </NavLink>
 
             <div className="text-center">
               <del className="text-gray-500 text-sm">{fee} BDT</del>
-              <h3 className="text-2xl font-bold text-red-500">{course_fee} BDT</h3>
+              <h3 className="text-2xl font-bold text-red-500">{finalPrice} BDT</h3>
             </div>
           </div>
         </div>
