@@ -16,6 +16,7 @@ import office from "../../src/assets/office.png";
 import digitalmarket from "../../src/assets/web/digital.png";
 import net from "../../src/assets/web/net.png";
 import english from "../../src/assets/web/english.png";
+import quran from "../../src/assets/quran.png";
 import diploma from "../../src/assets/web/diploma3.png";
 import Category from "../Pages/CourseCategories/Category";
 import { NavLink } from "react-router-dom";
@@ -32,6 +33,7 @@ const Description = () => {
     { imgSrc: net, description: "Networking & Hardware" },
     { imgSrc: english, description: "English Language" },
     { imgSrc: diploma, description: "Diploma Program" },
+    { imgSrc: quran, description: "Islamic Studies" },
   ];
 
   const responsive = {
