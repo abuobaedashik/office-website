@@ -44,7 +44,7 @@ const Description = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto pb-8">
+    <div className="w-11/12 z-0 mx-auto pb-8">
       <div className="flex flex-col  mx-auto  items-center justify-center">
         <div className="mt-12 mb-2 text-4xl text-center font-extrabold font-custom">
           Find Your Career Direction
@@ -60,14 +60,14 @@ const Description = () => {
         autoPlaySpeed={3000}
         infinite={true}
         showDots={false}
-        arrows={true}
+        
         
       >
         {category.map((slide, index) => (
           <NavLink
             to={`/category/${slide.description}`}
             key={index}
-            className="mx-2 p-6 w-[300px] h-[200px] flex flex-col items-center justify-center gap-5 rounded-3xl  shadow-md bg-gradient-to-r from-[#7fceae] to-[#7a7ad8] bg-white"
+            className="mx-2 p-6 w-[300px] h-[200px] flex flex-col  items-center justify-center gap-5 rounded-3xl  shadow-md bg-gradient-to-r from-[#7fceae] to-[#7a7ad8] bg-white"
           >
             <img
               src={slide.imgSrc}
