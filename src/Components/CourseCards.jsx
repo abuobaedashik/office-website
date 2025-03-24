@@ -92,7 +92,7 @@ const CourseCards = ({ course }) => {
         {/* Discount Badge */}
         {discountPercentage > 0 && (
           <div className="absolute top-3 right-3 bg-gradient-to-r from-red-500 to-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-lg shadow-md">
-            🔥 {discountPercentage}% OFF
+            🔥 {discountPercentage}%  OFF
           </div>
         )}
 
