@@ -45,7 +45,7 @@ const Feature = () => {
               learning, career growth, and real-world experience. Join us today
               and build a better future!
             </div>
-            <NavLink to={'/about'} className="px-4  py-2 hover:bg-[#1F2937] text-xl font-bold uppercase text-[#ffffff] rounded-lg border-b-2 mt-12 border-[#ffffff]">
+            <NavLink to={'/about'} className="px-4  py-2 hover:bg-[#1F2937] text-xl font-bold uppercase text-[#ffff] rounded-lg border-b-2 mt-12 border-[#ffffff]">
               Read More
             </NavLink>
           </div>
