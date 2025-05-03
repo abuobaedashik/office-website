@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
+
 import CourseCards from './CourseCards';
 
 const CourseCard = () => {

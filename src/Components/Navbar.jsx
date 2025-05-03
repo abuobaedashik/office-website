@@ -58,7 +58,13 @@ const Navbar = () => {
   return (
     <div className="fixed left-1/2 -translate-x-1/2 mx-auto max-w-[1920px] top-0  w-full z-[200]">
       {/* Red Section Hidden on Small Screens */}
-      <div className="bg-[#FF1E1E] text-xl text-[#f0f0f0] py-4 max-w-[1920px] w-full px-6 justify-between items-center hidden sm:flex">
+      <div 
+      className={`bg-[#FF1E1E] text-xl text-[#f0f0f0] py-4 max-w-[1920px] w-full px-6 justify-between items-center hidden  ${
+        isScrolled
+          ? " hidden "
+          : "sm:flex delay-700" 
+      }`}
+      >
         <p className="font-semibold text-xl flex items-center gap-2">
           <p>
             <FaPhoneAlt />

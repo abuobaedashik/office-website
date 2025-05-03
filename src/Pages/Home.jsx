@@ -7,13 +7,16 @@ import CardSec from "../Components/Provider/CardSec";
 import CourseCard from "../Components/CourseCard";
 import Feature from "../Components/Feature";
 import FreeSeminar from "../Components/FreeSeminar";
+import SwiperSlider from "./CourseCategories/SwiperSlider";
 // import { Typewriter } from 'react-simple-typewriter';
 
 const Home = () => {
   return (
     <div className="mt-0 ">
-      <div className="w-full mx-auto bg-[#87f2c7] ">
-       <Banner></Banner>
+      <div className="w-full mx-auto h-[650px] border-blue-900 border-2 bg-[#87f2c7] ">
+       {/* <Banner></Banner> */}
+     
+       <SwiperSlider />
       </div>
       
       {/* why  choice us section*/}

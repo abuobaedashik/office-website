@@ -11,7 +11,7 @@ import Description from "./Description";
 
 const About = () => {
   return (
-    <div className="w-11/12 mt-32 mx-auto my-10 p-6 bg-white shadow-lg rounded-2xl border">
+    <div className="w-11/12 mt-32 mx-auto my-10 p-6 ">
       <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
         About 3D Cluster
       </h2>
@@ -63,7 +63,7 @@ const About = () => {
         </h3>
         <div className="flex flex-col items-center gap-4">
           <p className="flex items-center gap-2 text-gray-700">
-            <FaMapMarkerAlt className="text-blue-500" /> Mirpur, Dhaka
+            <FaMapMarkerAlt className="text-blue-500" /> Mirpur, Dhaka 1216
           </p>
           <p className="flex items-center gap-2 text-gray-700">
             <FaPhoneAlt className="text-green-500" />{" "}

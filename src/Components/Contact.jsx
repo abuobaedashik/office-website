@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/
 
 const Contact = () => {
   return (
-    <div className="w-11/12 mt-32 mx-auto my-10 p-6 bg-white shadow-lg rounded-2xl border">
+    <div className="w-11/12 mt-32 mx-auto my-10 p-6  rounded-2xl ">
       <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">Contact Us</h2>
       <p className="text-gray-700 text-center mb-6">
         Get in touch with **3D Cluster** for inquiries, training, or support.  

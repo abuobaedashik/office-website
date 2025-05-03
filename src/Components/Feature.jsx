@@ -46,7 +46,7 @@ const Feature = () => {
               and build a better future!
             </div>
             <NavLink to={'/about'} className="px-4  py-2 hover:bg-[#1F2937] text-xl font-bold uppercase text-[#ffff] rounded-lg border-b-2 mt-12 border-[#ffffff]">
-              Read More
+              Read More ...
             </NavLink>
           </div>
         </div>
