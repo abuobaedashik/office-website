@@ -27,30 +27,49 @@ const Navbar = () => {
 
   // Menu Links
   const link = (
-    <>
+    <>  
       <NavLink
-        className="flex gap-1 font-roboto font-bold text-base items-center"
+        className={({ isActive }) =>
+          isActive
+            ? "flex gap-1 text-[#EEFF25] font-roboto font-bold text-base items-center "
+            : " flex gap-1 items-center text-sm font-medium px-3"
+        }
         to="/"
       >
-        <IoIosHome /> Home
+        Home 
       </NavLink>
+      {/* about us */}
       <NavLink
-        className="flex gap-1 font-roboto font-bold text-base items-center"
+        className={({ isActive }) =>
+          isActive
+            ? "flex gap-1 text-[#EEFF25] font-roboto font-bold text-base items-center "
+            : " flex gap-1 items-center text-sm font-medium px-3"
+        }
         to="/about"
       >
-        <MdReviews /> About Us
+        About Us
       </NavLink>
+      {/* contact */}
       <NavLink
-        className="flex gap-1 font-roboto font-bold text-base items-center"
+        className={({ isActive }) =>
+          isActive
+            ? "flex gap-1 text-[#EEFF25] font-roboto font-bold text-base items-center "
+            : " flex gap-1 items-center text-sm font-medium px-3"
+        }
         to="/contact"
       >
-        <IoAddCircleOutline /> Contact
+        Contact
       </NavLink>
+      {/* course */}
       <NavLink
-        className="flex gap-1 font-roboto font-bold text-base items-center"
+        className={({ isActive }) =>
+          isActive
+            ? "flex gap-1 text-[#EEFF25] font-roboto font-bold text-base items-center "
+            : " flex gap-1 items-center text-sm font-medium px-3"
+        }
         to="/course"
       >
-        <CgProfile /> Our Course
+         Our Course
       </NavLink>
     </>
   );
@@ -94,8 +113,8 @@ const Navbar = () => {
       <div
         className={`transition-all duration-500 max-w-[1920px] top-0 left-0 w-full z-50  ${
           isScrolled
-            ? "bg-white shadow-lg py-3"
-            : "bg-[#87f2c7] py-4 "
+            ? " shadow-lg text-[#ffffff]  py-3 bg-[#131313]"
+            : "bg-[#131313] py-4 text-[#ffffff] "
         }`}
       >
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6">
