@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
             </p>
             <p>Mirpur, Dhaka 1216</p>
-            <p>+8801765262296</p>
+            <p>+8801341560330</p>
             <p>abuobaedashik@gmail.com</p>
           </div>
         </nav>
@@ -50,7 +50,7 @@ const Footer = () => {
 
         {/* Subscription Section */}
         <nav className="flex flex-col gap-4 items-start">
-          <h6 className="text-2xl font-bold">Discount PRO Subscription</h6>
+          <h6 className="text-2xl font-bold">3D Cluster</h6>
           <p className="text-base font-bold">
             Stay Updated with the Best Deals
           </p>
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
         <div className="text-center flex items-center text-sm mt-4">
           {" "}
-          © 2025 Abu Obaed Ashik. All Rights Reserved.
+          © 2025 3D Cluster. All Rights Reserved.
         </div>
       </footer>
 

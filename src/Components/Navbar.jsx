@@ -88,8 +88,14 @@ const Navbar = () => {
           <p>
             <FaPhoneAlt />
           </p>
-          +8801765262296{" "}
+          <p className="font-semibold text-xl flex items-center gap-2">
+          +8801341560330
         </p>
+          <p className="font-semibold text-xl flex items-center gap-2">
+          +8801987221925
+        </p>
+        </p>
+       
         <div className="flex items-center gap-3">
           <p className="font-semibold text-xl flex items-center gap-2">
             <p>
