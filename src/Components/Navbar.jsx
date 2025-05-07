@@ -101,13 +101,13 @@ const Navbar = () => {
             <p>
               <MdEmail />
             </p>
-            abubaedashik@gmail.com{" "}
+            moftss@gmail.com
           </p>
           <p className="font-semibold text-xl flex items-center gap-2">
             <p>
               <MdEmail />
             </p>
-            mdashik872345@gmail.com{" "}
+            abubaedashik@gmail.com
           </p>
           <p className="text-xl font-semibold">
             Date: {todayDate}

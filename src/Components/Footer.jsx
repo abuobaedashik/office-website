@@ -6,19 +6,21 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
+
 const Footer = () => {
   return (
-    <div className="bg-[#131313] text-[#ffffffc7] pb-5 pt-8">
+    <div className=" text-[#ffffffc7] bg-[#131313]   pb-5 pt-10 ">
+      {/* bg end */}
       <footer className="grid grid-cols-1 md:grid-cols-3 text-left gap-8 px-5  border-b pb-12 mx-auto w-[95%] border-[#353535]">
         {/* Contact Info */}
         <nav className="flex flex-col gap-4 items-start">
           <h6 className="text-2xl font-bold">Contact Info</h6>
           <div className="flex flex-col gap-3 text-sm">
             <p>
-            <p className="text-xl font-nunito font-semibold">
-              <span className="text-2xl font-custom text-[#FF1E1E]">3D</span>{" "}
-              Cluster
-            </p>
+              <p className="text-xl font-nunito font-semibold">
+                <span className="text-2xl font-custom text-[#FF1E1E]">3D</span>{" "}
+                Cluster
+              </p>
             </p>
             <p>Mirpur, Dhaka 1216</p>
             <p>+8801341560330</p>
@@ -74,7 +76,7 @@ const Footer = () => {
       {/* Social Media Section */}
       <footer className="flex flex-col items-center justify-center px-4 pt-10 text-center w-[95%] mx-auto">
         <p className="text-2xl font-bold font-nunito">
-        Thank you for visiting our website. 
+          Thank you for visiting our website.
         </p>
         <div className="flex items-center justify-center gap-5 mt-6 text-xl">
           <FaFacebookF id="my-tooltip" className="hover:text-[#F49D40]" />
