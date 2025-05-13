@@ -1,9 +1,43 @@
 [
   {
     "_id": "66012a1a1a1a1a1a1a1a1a01",
-    "course_name": "Professional Graphics Design",
-    "course_fee": 10000,
-    "fee": 15000,
+    "course_name": "Advance Graphics Design",
+    "course_fee": 18000,
+    "fee": 25000,
+    "discount":"30%",
+    "review": 4.8,
+    "category": "Graphics Design",
+    "banner_image": "https://i.ibb.co.com/fT1Hy90/design2.jpg",
+    "duration": "6 Months",
+    "description": "Learn the fundamentals of graphic design, including typography, color theory, and composition.",
+    "course_module": [
+      "Typography",
+      "Color Theory",
+      "Composition",
+      "Layout Design",
+      "Branding",
+      "Invoice Template Design",
+      "Brochure Layout",
+      "Desk & well center Design ",
+      "Image Clipping",
+      "Banner / Poster Design"
+    ],
+    "software": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "CorelDRAW"
+    ],
+    "technology": [
+      "Graphic Design",
+      "Branding",
+      "Adobe Suite"
+    ]
+  },
+  {
+    "_id": "66012a1a1a1a1a1a1a1a1a01",
+    "course_name": "Graphics Design",
+    "course_fee": 18000,
+    "fee": 12000,
     "discount":"30%",
     "review": 4.8,
     "category": "Graphics Design",
@@ -165,7 +199,7 @@
     "_id": "66012a1a1a1a1a1a1a1a1a06",
     "course_name": "Web Development with React",
     "course_fee": 10000,
-    "fee": 15000,
+    "fee": 25000,
     "discount":"30%",
     "review": 4.9,
     "category": "Web Design and Development",
@@ -485,7 +519,141 @@
       "Tajweed & Recitation",
       "Islamic Education"
     ]
+},
+{
+  "_id": "66012a1a1a1a1a1a1a1a1a15",
+  "course_name": "ICT for Class 6",
+  "course_fee": 6000,
+  "fee": 8000,
+  "duration": "3 month",
+  "discount": "10%",
+  "review": 4.5,
+  "category": "School ICT Curriculum",
+  "banner_image": "https://i.ibb.co/S4VFzzrZ/ict6.jpg",
+  "description": "Introduction to basic ICT concepts tailored for Class 6 students.",
+  "course_module": [
+    "Introduction to ICT",
+    "Information and Communication System",
+    "Use of ICT in Daily Life",
+    "Computer Ethics and Safety",
+    "Hands-on: Basic Computer Parts & Functions"
+  ],
+  "software": [
+    "Paint",
+    "MS Word (Basics)"
+  ],
+  "technology": [
+    "Basic ICT",
+    "Computer Literacy"
+  ]
+},
+{
+  "_id": "66012a1a1a1a1a1a1a1a1a16",
+  "course_name": "ICT for Class 7",
+  "course_fee": 6000,
+  "fee": 8000,
+  "duration": "3 month",
+  "discount": "10%",
+  "review": 4.5,
+  "category": "School ICT Curriculum",
+  "banner_image": "https://i.ibb.co/qLHXXHtc/class7-ict.jpg",
+  "description": "Introduction to basic ICT concepts tailored for Class 7 students.",
+  "course_module": [
+    "Introduction to ICT",
+    "Information and Communication System",
+    "Use of ICT in Daily Life",
+    "Computer Ethics and Safety",
+    "Hands-on: Basic Computer Parts & Functions"
+  ],
+  "software": [
+    "Paint",
+    "MS Word (Basics)"
+  ],
+  "technology": [
+    "Basic ICT",
+    "Computer Literacy"
+  ]
+},
+{
+  "_id": "66012a1a1a1a1a1a1a1a1a17",
+  "course_name": "ICT for Class 8",
+  "course_fee": 6000,
+  "fee": 8000,
+  "duration": "3 month",
+  "discount": "10%",
+  "review": 4.5,
+  "category": "School ICT Curriculum",
+  "banner_image": "https://i.ibb.co/wFK16yZh/class8.jpg",
+  "description": "Introduction to basic ICT concepts tailored for Class 8 students.",
+  "course_module": [
+    "Introduction to ICT",
+    "Information and Communication System",
+    "Use of ICT in Daily Life",
+    "Computer Ethics and Safety",
+    "Hands-on: Basic Computer Parts & Functions"
+  ],
+  "software": [
+    "Paint",
+    "MS Word (Basics)"
+  ],
+  "technology": [
+    "Basic ICT",
+    "Computer Literacy"
+  ]
+},
+{
+  "_id": "66012a1a1a1a1a1a1a1a1a17",
+  "course_name": "ICT for Class 9",
+  "course_fee": 6000,
+  "fee": 8000,
+  "duration": "3 month",
+  "discount": "10%",
+  "review": 4.5,
+  "category": "School ICT Curriculum",
+  "banner_image": "https://i.ibb.co/Kc2W0B7P/9-20-ict.jpg",
+  "description": "Introduction to basic ICT concepts tailored for Class 9 students.",
+  "course_module": [
+    "Introduction to ICT",
+    "Information and Communication System",
+    "Use of ICT in Daily Life",
+    "Computer Ethics and Safety",
+    "Hands-on: Basic Computer Parts & Functions"
+  ],
+  "software": [
+    "Paint",
+    "MS Word (Basics)"
+  ],
+  "technology": [
+    "Basic ICT",
+    "Computer Literacy"
+  ]
+},
+{
+  "_id": "66012a1a1a1a1a1a1a1a1a17",
+  "course_name": "ICT for Class 10",
+  "course_fee": 6000,
+  "fee": 8000,
+  "duration": "3 month",
+  "discount": "10%",
+  "review": 4.5,
+  "category": "School ICT Curriculum",
+  "banner_image": "https://i.ibb.co/Kc2W0B7P/9-20-ict.jpg",
+  "description": "Introduction to basic ICT concepts tailored for Class 10 students.",
+  "course_module": [
+    "Introduction to ICT",
+    "Information and Communication System",
+    "Use of ICT in Daily Life",
+    "Computer Ethics and Safety",
+    "Hands-on: Basic Computer Parts & Functions"
+  ],
+  "software": [
+    "Paint",
+    "MS Word (Basics)"
+  ],
+  "technology": [
+    "Basic ICT",
+    "Computer Literacy"
+  ]
 }
-  
 
 ]
