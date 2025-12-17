@@ -11,7 +11,7 @@ const Feature = () => {
   return (
     <div>
       <div
-        className=" w-full bg-cover bg-center bg-fixed backdrop-blur-3xl pt-28  py-24 px-6 text-white "
+        className="  bg-cover bg-center bg-fixed backdrop-blur-3xl pt-28  py-24 px-6 text-white "
         style={{ backgroundImage: `url(${img})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>

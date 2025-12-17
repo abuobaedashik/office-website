@@ -23,6 +23,7 @@ import Category from "../Pages/CourseCategories/Category";
 import { NavLink } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { CommonHeader } from "./Ui/CommonHeader";
 
 const Description = () => {
   // Slide content array containing image paths and descriptions
@@ -47,21 +48,16 @@ const Description = () => {
 
   return (
     <div className="w-11/12 z-0 mx-auto pb-8">
-      <div className="flex flex-col  mx-auto  items-center justify-center">
-        <div className="mt-12 mb-2 text-4xl text-center font-extrabold font-custom">
-          Find Your Career Direction
-        </div>
-        <div className=" text-lg text-center mb-16">
-          {" "}
-          Choose the Right Course to Build Your Dream Career
-        </div>
-      </div>
+      {/* dynamic header */}
+      <CommonHeader textTitle=" Find Your Career Direction " textSubTitle="Choose the Right Course to Build Your Dream Career "></CommonHeader>
+      {/* card section */}
       <Carousel
         responsive={responsive}
         autoPlay={true}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={2000}
         infinite={true}
         showDots={false}
+        
         
         
       >
@@ -69,7 +65,7 @@ const Description = () => {
           <NavLink
             to={`/category/${slide.description}`}
             key={index}
-            className="mx-2 p-6 w-[300px] h-[200px] flex flex-col  items-center justify-center gap-5 rounded-3xl  shadow-md bg-gradient-to-r from-[#7fceae] to-[#7a7ad8] bg-white"
+            className="flex items-center justify-center flex-col gap-3"
           >
             <img
               src={slide.imgSrc}

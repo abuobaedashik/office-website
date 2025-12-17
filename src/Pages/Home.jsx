@@ -13,32 +13,36 @@ import SwiperSlider from "./CourseCategories/SwiperSlider";
 const Home = () => {
   return (
     <div className="mt-0 ">
-      <div className="w-full mx-auto h-[650px] bg-[#87f2c7] ">
-       {/* <Banner></Banner> */}
+      <div className="w-full mx-auto  h-auto bg-gradient-to-r from-[#FDEAED] to-[#FFFFFF] ">
+       <Banner></Banner>
      
-       <SwiperSlider />
+       {/* <SwiperSlider /> */}
       </div>
       
       {/* why  choice us section*/}
-      <div className="w-full bg-[#F0F0F0] mx-auto pb-12">
-       <Description></Description>
+      <div className="w-full bg-[#ffffff] mx-auto pb-12">
+        <div className="mx-auto max-w-[1290px]">
+             <Description></Description>
+        </div>
       </div>
 
        {/*  card section*/}
-       <div className="w-11/12 mx-auto mb-12">
+       <div className="max-w-[1290px] mx-auto mb-12 ">
        <CardSec></CardSec>
       </div>
 
       {/* course card data */}
-      <div className="w-full mx-auto mb-0 bg-[#f0f0f0] py-12">
-       <CourseCard></CourseCard>
+      <div className="w-full mb-0 bg-gradient-to-r from-[#FDEAED] to-[#FFFFFF]  py-12">
+         <div className="mx-auto max-w-[1290px]">
+                <CourseCard></CourseCard>
+         </div>
       </div>
       {/* course card data */}
       <div className="w-full mx-auto">
        <Feature></Feature>
       </div>
       {/* course card data */}
-      <div className="w-full mx-auto mb-0 bg-[#ffffff] py-12">
+      <div className=" max-w-[1290px] mx-auto mb-0 bg-[#ffffff] py-12">
        <FreeSeminar></FreeSeminar>
       </div>
 

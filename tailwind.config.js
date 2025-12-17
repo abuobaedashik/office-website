@@ -11,6 +11,7 @@ export default {
         roboto: ["Roboto", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
+        BBH:["BBH Hegarty", "sans-serif"]
       },
     },
   },
