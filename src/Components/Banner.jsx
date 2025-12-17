@@ -67,7 +67,7 @@ const Banner = () => {
                 />
 
                 {/* PLAY BUTTON OVERLAY (only before play) */}
-                {!open && (
+                {/* {!open && (
                   <button
                     onClick={() => setOpen(true)}
                     className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition"
@@ -76,7 +76,7 @@ const Banner = () => {
                       <Play className="w-8 h-8 text-[#FF2E2E] ml-1" />
                     </div>
                   </button>
-                )}
+                )} */}
               </div>
 
               {/* Fake content */}
