@@ -19,7 +19,7 @@ const CardSec = () => {
                 <img src={lifetime} alt="p" className="w-[80px] h-[80px]" />
               </div>
               <p className="text-2xl font-custom font-bold">Lifetime Support</p>
-              <p className="text-base font-bold font-inter">We are committed to providing lifetime support to ensure you have a seamless experience with our products/services. Our dedicated support team is always available to assist you with troubleshooting, updates, and any questions you may have—no matter how long you've been with us. Enjoy continuous assistance, expert guidance, and regular improvements at no additional cost. Your satisfaction is our priority!</p>
+              <p className="text-base font-bold font-inter">We are committed to providing lifetime support to ensure you have a seamless experience with our products/services. Our dedicated support team is always available to assist you with troubleshooting, updates, and any questions you may have no matter how long you've been with us. Enjoy continuous assistance, expert guidance, and regular improvements at no additional cost. Your satisfaction is our priority!</p>
 
             </div>
           </div>

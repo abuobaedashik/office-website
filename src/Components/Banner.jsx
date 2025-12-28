@@ -20,12 +20,14 @@ const Banner = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="max-w-[1290px] mx-auto relative min-h-screen overflow-hidden">
-      <div className="mt-8 flex flex-col md:flex-row justify-between py-24 items-center">
+    <div className="max-w-[1290px] mx-auto relative  overflow-hidden">
+      <div className="mt-8 flex flex-col md:flex-row justify-between py-32 items-center">
         {/* LEFT CONTENT */}
-        <div className="md:w-[45%] mb-8 md:mb-0">
+        <div className="md:w-[45%]  md:mb-0">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[#FF2E2E] to-[#f12735dc] bg-clip-text text-transparent font-BBH h-[154px]">
-            Upgrade Your Skills & Conquer the Tech World
+            
+             <span className="text-[#000000]">Upgrade Your Skills & </span> <br />
+             Conquer the Tech World
           </h1>
 
           <p className="mt-4 text-xl font-bold text-[#1F2937]">
