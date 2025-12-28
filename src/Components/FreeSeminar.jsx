@@ -4,16 +4,16 @@ import seminarImage from "../../src/assets/seminere-image.jpeg";
 import { useTypewriter } from "react-simple-typewriter";
 
 const FreeSeminar = () => {
-    const [text] = useTypewriter({
-      words: [
-        "Discover, Learn & Grow with Our Seminar!",
-        "Unlock New Insights: Join Our Exclusive Seminar!",
-        "Learn, Grow & Shine in the Tech Industry",
-        "Explore, Learn & Become a Tech Expert",
-        "From Zero to Hero Your Tech Journey Awaits",
-      ],
-      loop: 0,
-    });
+  const [text] = useTypewriter({
+    words: [
+      "Discover, Learn & Grow with Our Seminar!",
+      "Unlock New Insights: Join Our Exclusive Seminar!",
+      "Learn, Grow & Shine in the Tech Industry",
+      "Explore, Learn & Become a Tech Expert",
+      "From Zero to Hero Your Tech Journey Awaits",
+    ],
+    loop: 0,
+  });
   return (
     <div className="max-w-[1290px]   mx-6 bg-gradient-to-r from-[#FDEAED] to-[#FFFFFF] py-4 md:py-12 rounded-2xl shadow-lg">
       <div className="flex flex-col md:flex-row items-center justify-between px-6 gap-10">
@@ -23,7 +23,7 @@ const FreeSeminar = () => {
             <BiChalkboard className="text-[#d99904] text-6xl font-roboto" />
             Join Our <span className="text-[#d99904]">Free Seminars</span>
           </h1>
-          <div className="mt-5 text-xl text-[#024CAA] font-medium font-nunito border-2 h-[34px] ">
+          <div className="mt-5 text-xl text-[#024CAA] font-medium font-nunito h-[34px] ">
             <span>{text}</span>
           </div>
           <p className="py-6 text-gray-700 leading-relaxed text-lg font-roboto">
@@ -32,7 +32,7 @@ const FreeSeminar = () => {
             perfect course that matches your interest and discuss career
             prospects in tech.
           </p>
-          <button className="px-6 py-3 text-lg font-medium bg-[#d99904] text-white rounded-md hover:bg-[#b88403] transition-all duration-300">
+          <button className="px-4 py-2 rounded-2xl font-bold bg-[#FF2E2E] hover:bg-[#1F2937] text-white font-BBH">
             Join Seminar
           </button>
         </div>

@@ -14,7 +14,7 @@ const Feature = () => {
         className="  bg-cover bg-center bg-fixed backdrop-blur-3xl pt-28  py-24 px-6 text-white "
         style={{ backgroundImage: `url(${img})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70 "></div>
         <div className="mt-4 mb-16 relative  text-[#ffffff]">
           <div className="md:w-4/12 mx-auto text-center mt-2 ">
             <h1 className="md:text-base text-sm font-normal text-[#d99904] mb-2 ">
@@ -25,10 +25,10 @@ const Feature = () => {
             </h1>
           </div>
         </div>
-        <div className="mt-4 flex items-center z-30 justify-between flex-col mx-auto w-11/12 relative py-8 px-2 md:flex-row">
+        <div className="mt-4 flex items-center z-30 justify-between flex-col  max-w-[1290px] mx-auto px-6  relative py-8 md:flex-row">
           <img
             src={img}
-            className="md:w-[45%] h-[350px] w-full "
+            className="md:w-[51%] h-[380px] w-full rounded-[20px] object-cover"
             alt="FeatureImage"
           />
           <div className="md:w-[45%] w-full ">
@@ -37,7 +37,7 @@ const Feature = () => {
               {month} {day}, {year}
             </div>
             <div className="mt-4 text-[#D99904] text-xl font-semibold uppercase">
-              3D Cluster – Learn, Grow, Succeed!
+              3D Cluster Learn, Grow, Succeed!
             </div>
             <div className="mt-4 text-base mb-6">
               We provide expert-led training in [key subjects] to help you

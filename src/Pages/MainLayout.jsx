@@ -13,7 +13,7 @@ const MainLayout = () => {
             <div className="mx-auto ">
              <Outlet></Outlet>
             </div>
-            <div className="footer">
+            <div className="footer  bg-[#131313]  max-w-full flex items-center justify-center ">
                 <Footer></Footer>
             </div>
         </div>

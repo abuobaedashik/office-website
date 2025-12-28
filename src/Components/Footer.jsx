@@ -9,9 +9,9 @@ import { Tooltip } from "react-tooltip";
 
 const Footer = () => {
   return (
-    <div className=" text-[#ffffffc7] bg-[#131313]   pb-5 pt-10 ">
+    <div className=" text-[#ffffffc7] max-w-[1290px] mx-auto px-6  pb-5 pt-10 ">
       {/* bg end */}
-      <footer className="grid grid-cols-1 md:grid-cols-3 text-left gap-8 px-5  border-b pb-12 mx-auto w-[95%] border-[#353535]">
+      <footer className="grid grid-cols-1 md:grid-cols-3 text-left gap-8 mx-auto  border-b pb-12 border-[#353535]">
         {/* Contact Info */}
         <nav className="flex flex-col gap-4 items-start">
           <h6 className="text-2xl font-bold">Contact Info</h6>
@@ -51,7 +51,7 @@ const Footer = () => {
         </nav>
 
         {/* Subscription Section */}
-        <nav className="flex flex-col gap-4 items-start">
+        <nav className="flex flex-col gap-4 items-start font-roboto">
           <h6 className="text-2xl font-bold">3D Cluster</h6>
           <p className="text-base font-bold">
             Stay Updated with the Best Deals
@@ -66,7 +66,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="input input-bordered flex-grow bg-[#ffffff] text-[#000000] rounded-md"
             />
-            <button className="btn bg-[#F49D40] text-[#ffffff] rounded-md">
+            <button className="px-4 py-2 rounded-2xl font-bold bg-[#FF2E2E] hover:bg-[#1F2937] text-white">
               Subscribe
             </button>
           </div>
